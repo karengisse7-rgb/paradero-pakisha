@@ -1,104 +1,383 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Paradero Pakisha | Cachama Ahumada</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#fff7e8;color:#2b160d}
-header{background:linear-gradient(rgba(70,0,0,.82),rgba(70,0,0,.82)),url('https://images.unsplash.com/photo-1543353071-873f17a7a088?q=80&w=1600');background-size:cover;background-position:center;color:white;text-align:center;padding:70px 20px}
-.logo{width:180px;border-radius:50%;margin-bottom:20px}
-h1{font-size:48px;color:#f6bd2b}
-.sub{font-size:20px;margin-top:10px}
-.btn{display:inline-block;background:#f6bd2b;color:#3b0909;padding:14px 24px;margin:12px;border-radius:30px;text-decoration:none;font-weight:bold}
-section{max-width:1100px;margin:auto;padding:55px 22px}
-h2{text-align:center;font-size:36px;color:#7b0909;margin-bottom:25px}
-.intro{text-align:center;font-size:18px;line-height:1.7}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-.card{background:white;border-radius:18px;padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.12)}
-.card h3{color:#7b0909;margin-bottom:8px}
-.price{font-weight:bold;color:#a56a00;font-size:20px;margin-top:8px}
-.photo{width:100%;border-radius:18px;margin-top:20px;box-shadow:0 8px 25px rgba(0,0,0,.2)}
-.dark{background:#4b0808;color:white;max-width:none}
-.dark h2{color:#f6bd2b}
-.contact{text-align:center}
-footer{background:#240606;color:white;text-align:center;padding:25px}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#fff3df;color:#35170f}
+a{text-decoration:none}
+
+.hero{
+min-height:95vh;
+background:
+linear-gradient(90deg,rgba(20,4,2,.92),rgba(35,8,4,.65),rgba(20,4,2,.20)),
+url("restaurante.jpg");
+background-size:cover;
+background-position:center;
+color:white;
+position:relative;
+padding:25px 6%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+nav{
+position:absolute;
+top:20px;
+left:6%;
+right:6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.logo{
+width:150px;
+height:150px;
+object-fit:cover;
+border-radius:50%;
+box-shadow:0 0 25px rgba(0,0,0,.5);
+}
+
+.menu{
+display:flex;
+gap:26px;
+font-weight:bold;
+}
+
+.menu a{color:white}
+.menu a:hover{color:#f7b827}
+
+.hero-content{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+align-items:center;
+gap:35px;
+margin-top:110px;
+}
+
+h1{
+font-size:76px;
+line-height:.9;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+h1 span{color:#f7b827}
+
+.subtitle{
+font-size:34px;
+font-family:cursive;
+margin:18px 0 10px;
+}
+
+.tagline{
+font-weight:bold;
+color:#f7b827;
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+background:#7b0b0b;
+color:white;
+padding:16px 24px;
+border-radius:14px;
+font-weight:900;
+border:2px solid #f7b827;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+margin:8px 8px 8px 0;
+}
+
+.btn.gold{
+background:#f7b827;
+color:#3a0b06;
+}
+
+.hero-food{
+width:100%;
+border-radius:28px;
+box-shadow:0 20px 45px rgba(0,0,0,.6);
+border:4px solid rgba(247,184,39,.7);
+}
+
+section{
+padding:55px 6%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+color:#730b0b;
+margin-bottom:30px;
+text-transform:uppercase;
+}
+
+.welcome{
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:35px;
+align-items:center;
+background:#fff9ed;
+}
+
+.welcome p{
+font-size:18px;
+line-height:1.7;
+}
+
+.icons{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+text-align:center;
+font-weight:bold;
+color:#6a210d;
+}
+
+.icon-box{
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:22px;
+}
+
+.card{
+background:#fff8ea;
+border:1px solid #d49b4c;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.card img{
+width:100%;
+height:190px;
+object-fit:cover;
+}
+
+.card-body{
+padding:18px;
+text-align:center;
+}
+
+.card h3{
+color:#4b0b07;
+font-size:22px;
+margin-bottom:8px;
+}
+
+.price{
+display:inline-block;
+margin-top:10px;
+background:#7b0b0b;
+color:white;
+padding:8px 14px;
+border-radius:8px;
+font-weight:bold;
+}
+
+.three{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:24px;
+}
+
+.info-card{
+background:#fff8ea;
+padding:25px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.info-card h3{
+color:#730b0b;
+font-size:28px;
+margin-bottom:15px;
+}
+
+.line{
+display:flex;
+justify-content:space-between;
+border-bottom:1px dotted #b56b25;
+padding:8px 0;
+}
+
+.schedule{
+background:#7b0b0b;
+color:white;
+text-align:center;
+border-radius:18px;
+padding:25px;
+margin-top:20px;
+}
+
+.contact{
+background:#4a0707;
+color:white;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+align-items:center;
+}
+
+.contact h2{color:#f7b827;text-align:left}
+.contact p{font-size:18px;line-height:1.7}
+
+footer{
+background:#230302;
+color:white;
+text-align:center;
+padding:18px;
+}
+
+.float-whatsapp{
+position:fixed;
+right:18px;
+bottom:18px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-weight:bold;
+box-shadow:0 8px 25px rgba(0,0,0,.35);
+z-index:99;
+}
+
+@media(max-width:850px){
+.menu{display:none}
+.logo{width:115px;height:115px}
+.hero-content,.welcome,.three,.contact{grid-template-columns:1fr}
+h1{font-size:50px}
+.subtitle{font-size:28px}
+.hero{padding-top:120px}
+}
 </style>
 </head>
+
 <body>
 
-<header>
-<img class="logo" src="https://i.imgur.com/8ZQZQZQ.png" alt="Logo Paradero Pakisha">
-<h1>PARADERO PAKISHA</h1>
-<p class="sub">Cachama Ahumada • Sabor Amazónico • Tradición</p>
-<a class="btn" href="https://wa.me/593979376286">Reservar por WhatsApp</a>
-<a class="btn" href="https://www.google.com/maps/place/PARADERO+PAKISHA/" target="_blank">Ver ubicación</a>
+<a class="float-whatsapp" href="https://wa.me/593995876934" target="_blank">Ordenar por WhatsApp</a>
+
+<header class="hero" id="inicio">
+<nav>
+<img src="logo.jpg" class="logo" alt="Logo Paradero Pakisha">
+<div class="menu">
+<a href="#inicio">INICIO</a>
+<a href="#menu">MENÚ</a>
+<a href="#especiales">ESPECIALES</a>
+<a href="#bebidas">BEBIDAS</a>
+<a href="#ubicacion">UBICACIÓN</a>
+</div>
+</nav>
+
+<div class="hero-content">
+<div>
+<h1>Paradero<br><span>Pakisha</span></h1>
+<div class="subtitle">Cachama Ahumada</div>
+<div class="tagline">SABOR AMAZÓNICO • TRADICIÓN • FAMILIA</div>
+<a class="btn" href="https://wa.me/593995876934" target="_blank">ORDENAR POR WHATSAPP<br>+593 99 587 6934</a>
+<a class="btn gold" href="#menu">VER MENÚ</a>
+</div>
+
+<img src="cachama.jpg" class="hero-food" alt="Bandeja de Cachama Ahumada">
+</div>
 </header>
 
-<section>
-<h2>Bienvenidos</h2>
-<p class="intro">
-En Paradero Pakisha vivimos el auténtico sabor amazónico. Nuestros platos tradicionales se sirven sobre una cama de hoja de bijao, acompañados de arroz blanco, chifles, menestra de lentejas casera y ensalada fresca.
+<section class="welcome">
+<div>
+<h2 class="section-title" style="text-align:left">Bienvenidos</h2>
+<p>
+En Paradero Pakisha vivimos el auténtico sabor amazónico. Nuestros platos tradicionales se sirven sobre una cama de hoja de bijao, acompañados de arroz blanco, crujientes chifles, menestra de lentejas casera y ensalada fresca.
 </p>
-</section>
-
-<section>
-<h2>Especialidad de la Casa</h2>
-<div class="card">
-<h3>Bandeja de Cachama Ahumada</h3>
-<p>Perfecta para compartir en grupo. Desde $25 para aproximadamente 3 adultos. A mayor precio, recibes una cachama más grande y guarniciones más abundantes.</p>
-<p class="price">Desde $25</p>
+</div>
+<div class="icons">
+<div class="icon-box">🍃<br>Ingredientes frescos</div>
+<div class="icon-box">🍲<br>Cocina tradicional</div>
+<div class="icon-box">👨‍👩‍👧‍👦<br>Ambiente familiar</div>
+<div class="icon-box">❤️<br>Hecho con amor</div>
 </div>
 </section>
 
-<section>
-<h2>Platos a la Carta</h2>
+<section id="menu">
+<h2 class="section-title">Platos a la Carta</h2>
 <div class="grid">
-<div class="card"><h3>Chuleta Asada de Cerdo</h3><p>2 unidades.</p><p class="price">$6.00</p></div>
-<div class="card"><h3>Pollo Ahumado</h3><p>Presa de pollo ahumado.</p><p class="price">$6.00</p></div>
-<div class="card"><h3>Tilapia Frita</h3><p>Servida con guarniciones tradicionales.</p><p class="price">$6.00</p></div>
-<div class="card"><h3>Tilapia Asada</h3><p>Preparada al momento.</p><p class="price">$6.00</p></div>
+<div class="card"><img src="cachama.jpg"><div class="card-body"><h3>Chuleta Asada de Cerdo</h3><p>2 unidades</p><span class="price">$6.00</span></div></div>
+<div class="card"><img src="cachama.jpg"><div class="card-body"><h3>Pollo Ahumado</h3><p>Presa</p><span class="price">$6.00</span></div></div>
+<div class="card"><img src="cachama.jpg"><div class="card-body"><h3>Tilapia Frita</h3><p>Con guarniciones tradicionales</p><span class="price">$6.00</span></div></div>
+<div class="card"><img src="cachama.jpg"><div class="card-body"><h3>Tilapia Asada</h3><p>Preparada al momento</p><span class="price">$6.00</span></div></div>
 </div>
 </section>
 
-<section>
-<h2>Especiales de la Casa</h2>
-<div class="grid">
-<div class="card">
+<section id="especiales">
+<h2 class="section-title">Especiales de la Casa</h2>
+<div class="three">
+<div class="info-card">
 <h3>Caldo de Gallina Criolla</h3>
 <p>Presa de gallina criolla, yuca cocinada, perejil, cebolla blanca y tajada de limón.</p>
-<p class="price">$7.00</p>
+<span class="price">$7.00</span>
 </div>
-<div class="card">
+
+<div class="info-card">
+<h3>Bandeja de Cachama Ahumada</h3>
+<p>Perfecta para compartir en grupo. Desde $25 para aproximadamente 3 adultos. A mayor precio, recibes una cachama más grande y más guarniciones.</p>
+<span class="price">Desde $25</span>
+</div>
+
+<div class="info-card">
 <h3>Guarniciones Adicionales</h3>
-<p>Arroz, chifles, yuca, menestra, ensalada y ají de la casa.</p>
-<p class="price">Desde $1 • Ají gratis</p>
+<div class="line"><span>Arroz</span><strong>$1.00</strong></div>
+<div class="line"><span>Chifles</span><strong>$1.00</strong></div>
+<div class="line"><span>Yuca</span><strong>$1.00</strong></div>
+<div class="line"><span>Menestra</span><strong>$1.00</strong></div>
+<div class="line"><span>Ensalada</span><strong>$1.50</strong></div>
+<div class="line"><span>Ají de la casa</span><strong>GRATIS</strong></div>
 </div>
+</div>
+
+<div class="schedule">
+<h3>HORARIO DE ATENCIÓN</h3>
+<p>SÁBADOS, DOMINGOS Y FERIADOS NACIONALES</p>
+<h2>10:30 AM - 5:30 PM</h2>
 </div>
 </section>
 
-<section>
-<h2>Bebidas</h2>
+<section id="bebidas">
+<h2 class="section-title">Bebidas</h2>
 <div class="grid">
-<div class="card"><h3>Té de Guayusa Helado</h3><p>Repeticiones ilimitadas.</p><p class="price">Gratis</p></div>
-<div class="card"><h3>Gaseosas</h3><p>Botella personal.</p><p class="price">$1.00</p></div>
-<div class="card"><h3>Aguas</h3><p>Agua natural y agua con gas.</p><p class="price">$1.00</p></div>
-<div class="card"><h3>Cervezas</h3><p>Corona, Club Premium y Pilsener.</p><p class="price">Desde $3.00</p></div>
+<div class="card"><div class="card-body"><h3>Té de Guayusa Helado</h3><p>Repeticiones ilimitadas</p><span class="price">GRATIS</span></div></div>
+<div class="card"><div class="card-body"><h3>Gaseosas</h3><p>Botella personal</p><span class="price">$1.00</span></div></div>
+<div class="card"><div class="card-body"><h3>Aguas</h3><p>Agua natural y con gas</p><span class="price">$1.00</span></div></div>
+<div class="card"><div class="card-body"><h3>Cervezas</h3><p>Corona, Club Premium y Pilsener</p><span class="price">Desde $3.00</span></div></div>
 </div>
 </section>
 
-<section class="dark">
-<div class="contact">
-<h2>Horario y Ubicación</h2>
-<p><strong>Sábados, domingos y feriados nacionales</strong></p>
-<p>10:30 AM a 5:30 PM</p>
+<section class="contact" id="ubicacion">
+<div>
+<h2 class="section-title">Ubicación</h2>
+<p><strong>Km 13 de la vía Tena - Talag</strong><br>Tena, Napo, Ecuador</p>
 <br>
-<p><strong>Ubicado en el km 13 de la vía Tena–Talag</strong></p>
-<p>Tena, Napo, Ecuador</p>
-<br>
-<a class="btn" href="https://wa.me/593979376286">WhatsApp: +593 97 937 6286</a>
-<a class="btn" href="https://wa.me/593995876934">WhatsApp: +593 99 587 6934</a>
+<a class="btn gold" href="https://www.google.com/maps/place/PARADERO+PAKISHA/@-1.0562495,-77.8976783,17z/data=!3m1!4b1!4m6!3m5!1s0x91d6a8431e4ecbe7:0xd1ffc5af111b424!8m2!3d-1.0562549!4d-77.8951034!16s%2Fg%2F11ggm4706d" target="_blank">VER EN GOOGLE MAPS</a>
+</div>
+
+<div>
+<h2 class="section-title">Síguenos</h2>
+<p>Facebook: Paradero Pakisha</p>
+<p>Instagram: @paraderopakisha</p>
 <br>
 <a class="btn" href="https://www.facebook.com/profile.php?id=100052481355500" target="_blank">Facebook</a>
 <a class="btn" href="https://www.instagram.com/paraderopakisha/" target="_blank">Instagram</a>
@@ -106,7 +385,7 @@ En Paradero Pakisha vivimos el auténtico sabor amazónico. Nuestros platos trad
 </section>
 
 <footer>
-© 2026 Paradero Pakisha — Cachama Ahumada en Tena, Napo, Ecuador
+© 2026 Paradero Pakisha — Cachama Ahumada | Tena, Napo, Ecuador
 </footer>
 
 </body>
