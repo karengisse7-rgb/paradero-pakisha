@@ -3,174 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paradero Pakisha</title>
+<title>Paradero Pakisha | Cachama Ahumada</title>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: Arial, sans-serif;
-}
-
-body{
-background:#fff8f0;
-color:#2d1b10;
-}
-
-header{
-background:#8B0000;
-color:white;
-padding:30px;
-text-align:center;
-}
-
-header h1{
-font-size:48px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:20px;
-}
-
-.hero{
-padding:40px;
-text-align:center;
-}
-
-.hero img{
-width:90%;
-max-width:800px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-.section{
-padding:50px 30px;
-max-width:1100px;
-margin:auto;
-}
-
-.section h2{
-font-size:36px;
-margin-bottom:20px;
-color:#8B0000;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
-.contact{
-background:#8B0000;
-color:white;
-padding:50px 30px;
-text-align:center;
-}
-
-.contact a{
-color:#FFD700;
-text-decoration:none;
-font-weight:bold;
-}
-
-footer{
-background:#2d1b10;
-color:white;
-text-align:center;
-padding:20px;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#fff7e8;color:#2b160d}
+header{background:linear-gradient(rgba(70,0,0,.82),rgba(70,0,0,.82)),url('https://images.unsplash.com/photo-1543353071-873f17a7a088?q=80&w=1600');background-size:cover;background-position:center;color:white;text-align:center;padding:70px 20px}
+.logo{width:180px;border-radius:50%;margin-bottom:20px}
+h1{font-size:48px;color:#f6bd2b}
+.sub{font-size:20px;margin-top:10px}
+.btn{display:inline-block;background:#f6bd2b;color:#3b0909;padding:14px 24px;margin:12px;border-radius:30px;text-decoration:none;font-weight:bold}
+section{max-width:1100px;margin:auto;padding:55px 22px}
+h2{text-align:center;font-size:36px;color:#7b0909;margin-bottom:25px}
+.intro{text-align:center;font-size:18px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:white;border-radius:18px;padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.card h3{color:#7b0909;margin-bottom:8px}
+.price{font-weight:bold;color:#a56a00;font-size:20px;margin-top:8px}
+.photo{width:100%;border-radius:18px;margin-top:20px;box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.dark{background:#4b0808;color:white;max-width:none}
+.dark h2{color:#f6bd2b}
+.contact{text-align:center}
+footer{background:#240606;color:white;text-align:center;padding:25px}
 </style>
 </head>
 <body>
 
 <header>
+<img class="logo" src="https://i.imgur.com/8ZQZQZQ.png" alt="Logo Paradero Pakisha">
 <h1>PARADERO PAKISHA</h1>
-<p>Cachama Ahumada • Sabor Amazónico • Tradición</p>
+<p class="sub">Cachama Ahumada • Sabor Amazónico • Tradición</p>
+<a class="btn" href="https://wa.me/593979376286">Reservar por WhatsApp</a>
+<a class="btn" href="https://www.google.com/maps/place/PARADERO+PAKISHA/" target="_blank">Ver ubicación</a>
 </header>
 
-<section class="hero">
-<img src="https://i.imgur.com/YOURIMAGE.jpg" alt="Cachama Ahumada">
-</section>
-
-<section class="section">
+<section>
 <h2>Bienvenidos</h2>
-<p>
-En Paradero Pakisha vivimos el auténtico sabor amazónico.  
-Nuestros platos tradicionales se sirven sobre hoja de bijao, acompañados de arroz blanco, yuca cocinada, chifles, ensalada fresca y el verdadero sabor de casa.
+<p class="intro">
+En Paradero Pakisha vivimos el auténtico sabor amazónico. Nuestros platos tradicionales se sirven sobre una cama de hoja de bijao, acompañados de arroz blanco, chifles, menestra de lentejas casera y ensalada fresca.
 </p>
 </section>
 
-<section class="section">
-<h2>Nuestros Especiales</h2>
-
-<div class="cards">
-
+<section>
+<h2>Especialidad de la Casa</h2>
 <div class="card">
 <h3>Bandeja de Cachama Ahumada</h3>
-<p>Desde $25</p>
+<p>Perfecta para compartir en grupo. Desde $25 para aproximadamente 3 adultos. A mayor precio, recibes una cachama más grande y guarniciones más abundantes.</p>
+<p class="price">Desde $25</p>
 </div>
+</section>
 
+<section>
+<h2>Platos a la Carta</h2>
+<div class="grid">
+<div class="card"><h3>Chuleta Asada de Cerdo</h3><p>2 unidades.</p><p class="price">$6.00</p></div>
+<div class="card"><h3>Pollo Ahumado</h3><p>Presa de pollo ahumado.</p><p class="price">$6.00</p></div>
+<div class="card"><h3>Tilapia Frita</h3><p>Servida con guarniciones tradicionales.</p><p class="price">$6.00</p></div>
+<div class="card"><h3>Tilapia Asada</h3><p>Preparada al momento.</p><p class="price">$6.00</p></div>
+</div>
+</section>
+
+<section>
+<h2>Especiales de la Casa</h2>
+<div class="grid">
 <div class="card">
 <h3>Caldo de Gallina Criolla</h3>
-<p>Tradicional por cuartos</p>
+<p>Presa de gallina criolla, yuca cocinada, perejil, cebolla blanca y tajada de limón.</p>
+<p class="price">$7.00</p>
 </div>
-
 <div class="card">
-<h3>Tilapia Asada / Frita</h3>
-<p>$6.00</p>
+<h3>Guarniciones Adicionales</h3>
+<p>Arroz, chifles, yuca, menestra, ensalada y ají de la casa.</p>
+<p class="price">Desde $1 • Ají gratis</p>
 </div>
-
-<div class="card">
-<h3>Pollo Ahumado</h3>
-<p>$6.00</p>
-</div>
-
 </div>
 </section>
 
-<section class="section">
-<h2>Ubicación</h2>
-<p>
-Vía Tena – Talag km 13<br>
-Tena – Napo – Ecuador
-</p>
-<br>
-<p>
-<a href="https://www.google.com/maps/place/PARADERO+PAKISHA/" target="_blank">
-Ver ubicación en Google Maps
-</a>
-</p>
+<section>
+<h2>Bebidas</h2>
+<div class="grid">
+<div class="card"><h3>Té de Guayusa Helado</h3><p>Repeticiones ilimitadas.</p><p class="price">Gratis</p></div>
+<div class="card"><h3>Gaseosas</h3><p>Botella personal.</p><p class="price">$1.00</p></div>
+<div class="card"><h3>Aguas</h3><p>Agua natural y agua con gas.</p><p class="price">$1.00</p></div>
+<div class="card"><h3>Cervezas</h3><p>Corona, Club Premium y Pilsener.</p><p class="price">Desde $3.00</p></div>
+</div>
 </section>
 
-<section class="contact">
-<h2>Contáctanos</h2>
-
-<p>WhatsApp 1: <a href="https://wa.me/593979376286">+593 97 937 6286</a></p>
+<section class="dark">
+<div class="contact">
+<h2>Horario y Ubicación</h2>
+<p><strong>Sábados, domingos y feriados nacionales</strong></p>
+<p>10:30 AM a 5:30 PM</p>
 <br>
-<p>WhatsApp 2: <a href="https://wa.me/593995876934">+593 99 587 6934</a></p>
+<p><strong>Ubicado en el km 13 de la vía Tena–Talag</strong></p>
+<p>Tena, Napo, Ecuador</p>
 <br>
-<p>Facebook: <a href="https://www.facebook.com/profile.php?id=100052481355500">Paradero Pakisha</a></p>
+<a class="btn" href="https://wa.me/593979376286">WhatsApp: +593 97 937 6286</a>
+<a class="btn" href="https://wa.me/593995876934">WhatsApp: +593 99 587 6934</a>
 <br>
-<p>Instagram: <a href="https://www.instagram.com/paraderopakisha/">@paraderopakisha</a></p>
-<br>
-<p>Horario de atención:</p>
-<p>Sábados, domingos y feriados</p>
-<p>10:30 AM – 5:30 PM</p>
-
+<a class="btn" href="https://www.facebook.com/profile.php?id=100052481355500" target="_blank">Facebook</a>
+<a class="btn" href="https://www.instagram.com/paraderopakisha/" target="_blank">Instagram</a>
+</div>
 </section>
 
 <footer>
-© 2026 Paradero Pakisha — Tena, Napo, Ecuador
+© 2026 Paradero Pakisha — Cachama Ahumada en Tena, Napo, Ecuador
 </footer>
 
 </body>
