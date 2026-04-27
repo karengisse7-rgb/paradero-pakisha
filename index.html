@@ -3,65 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paradero Pakisha | Menú Bilingüe</title>
+<title>Paradero Pakisha | Sabor Amazónico</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#fff6e8;color:#2f160c}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#fff4df;color:#30140b}
 a{text-decoration:none}
 img{max-width:100%}
-html{scroll-behavior:smooth}
 
 .hero{
 min-height:100vh;
-background:
-linear-gradient(90deg,rgba(25,5,2,.92),rgba(60,10,5,.70),rgba(25,5,2,.25)),
-url("restaurante.jpg.png");
+background:linear-gradient(90deg,rgba(24,5,2,.94),rgba(60,10,5,.72),rgba(24,5,2,.28)),url("restaurante.jpg");
 background-size:cover;
 background-position:center;
 color:white;
-padding:30px 7%;
+padding:25px 7%;
 display:flex;
 flex-direction:column;
 justify-content:center;
+position:relative;
+}
+
+nav{
+position:absolute;
+top:20px;
+left:7%;
+right:7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
 width:140px;
 height:140px;
 object-fit:cover;
-margin-bottom:20px;
+border-radius:50%;
 box-shadow:0 0 25px rgba(0,0,0,.5);
 }
 
-h1{
-font-size:72px;
-line-height:.9;
-text-transform:uppercase;
+.nav-links a{
+color:white;
+margin-left:22px;
+font-weight:bold;
 }
 
-h1 span{color:#f4b51b}
+.hero-grid{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+align-items:center;
+gap:40px;
+margin-top:110px;
+}
+
+h1{
+font-size:76px;
+line-height:.9;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+
+h1 span{color:#f4b41a}
 
 .hero h2{
-font-size:34px;
+font-size:36px;
 font-family:cursive;
-margin:15px 0;
+margin:18px 0;
+color:#fff0ca;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.6;
+max-width:620px;
+}
+
+.badge{
+display:inline-block;
+background:#f4b41a;
+color:#3b0905;
+padding:9px 15px;
+border-radius:30px;
+font-weight:bold;
+margin-bottom:18px;
 }
 
 .btn{
 display:inline-block;
-background:#7b0b0b;
+background:#7d0c0c;
 color:white;
-padding:15px 22px;
+padding:15px 23px;
 border-radius:14px;
-font-weight:bold;
-margin:12px 8px 0 0;
-border:2px solid #f4b51b;
+font-weight:900;
+border:2px solid #f4b41a;
+margin:18px 8px 0 0;
+box-shadow:0 8px 22px rgba(0,0,0,.35);
 }
 
-.gold{
-background:#f4b51b;
-color:#3a0b05;
+.btn.gold{
+background:#f4b41a;
+color:#3b0905;
+}
+
+.hero-food{
+border-radius:28px;
+border:4px solid rgba(244,180,26,.75);
+box-shadow:0 20px 45px rgba(0,0,0,.6);
 }
 
 section{
@@ -70,36 +118,37 @@ padding:60px 7%;
 
 .title{
 text-align:center;
-font-size:38px;
-color:#7b0b0b;
+font-size:42px;
+color:#740b0b;
 margin-bottom:30px;
+text-transform:uppercase;
 }
 
-.subtitle{
-font-size:15px;
-color:#8b5a2b;
-font-style:italic;
-display:block;
-margin-top:6px;
+.intro{
+font-size:18px;
+line-height:1.8;
+max-width:980px;
+margin:auto;
+text-align:center;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:22px;
 }
 
 .card{
-background:white;
+background:#fff9ec;
+border:1px solid #d6a14e;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,.10);
-border:1px solid #d8a65a;
+box-shadow:0 8px 22px rgba(0,0,0,.12);
 }
 
 .card img{
 width:100%;
-height:200px;
+height:190px;
 object-fit:cover;
 }
 
@@ -109,18 +158,49 @@ text-align:center;
 }
 
 .card h3{
-color:#6d0909;
+color:#640909;
 font-size:22px;
+margin-bottom:8px;
 }
 
 .price{
 display:inline-block;
 margin-top:10px;
-background:#7b0b0b;
+background:#7d0c0c;
 color:white;
 padding:8px 14px;
-border-radius:8px;
+border-radius:9px;
 font-weight:bold;
+}
+
+.story{
+background:#fff9ec;
+}
+
+.story-box{
+max-width:1000px;
+margin:auto;
+background:white;
+padding:35px;
+border-radius:24px;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+font-size:18px;
+line-height:1.8;
+}
+
+.promo{
+background:#5a0707;
+color:white;
+text-align:center;
+}
+
+.promo .title{color:#f4b41a}
+
+.promo img{
+max-width:850px;
+width:100%;
+border-radius:22px;
+box-shadow:0 15px 35px rgba(0,0,0,.45);
 }
 
 .carousel{
@@ -150,225 +230,216 @@ margin:5px;
 cursor:pointer;
 }
 
-.story{
-background:#fff9ef;
-}
-
-.story-box{
-max-width:1000px;
-margin:auto;
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-line-height:1.8;
-font-size:18px;
-}
-
-.promo{
-background:#5a0707;
+.info{
+background:#7d0c0c;
 color:white;
 text-align:center;
+border-radius:22px;
+padding:30px;
+margin-top:30px;
 }
 
 .contact{
-background:#4a0707;
+background:#3a0505;
 color:white;
-text-align:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+.contact .title{
+color:#f4b41a;
+text-align:left;
+}
+
+.contact p{
+font-size:18px;
+line-height:1.7;
+}
+
+.map{
+width:100%;
+height:330px;
+border:0;
+border-radius:22px;
 }
 
 footer{
 background:#210302;
 color:white;
 text-align:center;
-padding:20px;
+padding:22px;
+}
+
+.float{
+position:fixed;
+right:18px;
+bottom:18px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-weight:bold;
+box-shadow:0 8px 25px rgba(0,0,0,.35);
+z-index:99;
+}
+
+@media(max-width:850px){
+.nav-links{display:none}
+.logo{width:105px;height:105px}
+.hero-grid,.contact{grid-template-columns:1fr}
+h1{font-size:50px}
+.hero h2{font-size:28px}
+.hero{padding-top:120px}
 }
 </style>
 </head>
 
 <body>
 
-<header class="hero">
+<a class="float" href="https://wa.me/593995876934" target="_blank">Ordenar por WhatsApp</a>
 
-<img src="logo.jpg.jpeg" class="logo" alt="Logo Pakisha">
+<header class="hero" id="inicio">
+<nav>
+<img src="logo.jpg" class="logo" alt="Logo Pakisha">
+<div class="nav-links">
+<a href="#menu">Menú</a>
+<a href="#historia">Historia</a>
+<a href="#promo">Promociones</a>
+<a href="#ubicacion">Ubicación</a>
+</div>
+</nav>
 
-<h1>PARADERO <span>PAKISHA</span></h1>
-
+<div class="hero-grid">
+<div>
+<span class="badge">Restaurante familiar • Cultura Kichwa • 10 años</span>
+<h1>Paradero<br><span>Pakisha</span></h1>
 <h2>Cachama Ahumada</h2>
+<p>Más de 10 años compartiendo el auténtico sabor de la Amazonía ecuatoriana en un ambiente familiar, natural y lleno de tradición.</p>
+<a class="btn" href="https://wa.me/593995876934" target="_blank">ORDENAR POR WHATSAPP<br>+593 99 587 6934</a>
+<a class="btn gold" href="#menu">VER MENÚ</a>
+</div>
 
-<p>
-Más de 10 años compartiendo el auténtico sabor de la Amazonía ecuatoriana.<br>
-<span class="subtitle" style="color:white;">
-More than 10 years sharing the authentic flavor of the Ecuadorian Amazon.
-</span>
-</p>
-
-<a class="btn" href="https://wa.me/593995876934" target="_blank">
-Ordenar por WhatsApp<br>
-<span class="subtitle" style="color:white;">Order via WhatsApp</span>
-</a>
-
-<a class="btn gold" href="#menu">
-Ver Menú<br>
-<span class="subtitle">See Menu</span>
-</a>
-
+<img src="cachama.jpg" class="hero-food" alt="Cachama Ahumada Pakisha">
+</div>
 </header>
 
+<section>
+<h2 class="title">Bienvenidos</h2>
+<p class="intro">
+En Paradero Pakisha vivimos el auténtico sabor amazónico. Nuestros platos tradicionales se sirven sobre una cama de hoja de bijao, acompañados de arroz blanco, chifles, menestra de lentejas casera y ensalada fresca.
+</p>
+
+<div class="info">
+<h3>Horario de atención</h3>
+<p>Sábados, domingos y feriados nacionales</p>
+<h2>10:30 AM – 5:30 PM</h2>
+</div>
+</section>
+
 <section id="menu">
-<h2 class="title">
-PLATOS A LA CARTA
-<span class="subtitle">À LA CARTE DISHES</span>
-</h2>
+<h2 class="title">Platos a la Carta</h2>
 
 <div class="grid">
-
-<div class="card">
-<img src="cachama.jpg.png">
-<div class="card-body">
-<h3>Chuleta Asada de Cerdo (2 unidades)</h3>
-<span class="subtitle">Pork Chop Roast (2 pieces)</span>
-<div class="price">$6.00</div>
-</div>
-</div>
-
-<div class="card">
-<img src="cachama.jpg.png">
-<div class="card-body">
-<h3>Pollo Ahumado (Presa)</h3>
-<span class="subtitle">Smoked Chicken (Quarter)</span>
-<div class="price">$6.00</div>
-</div>
-</div>
-
-<div class="card">
-<img src="cachama.jpg.png">
-<div class="card-body">
-<h3>Tilapia Frita</h3>
-<span class="subtitle">Fried Tilapia</span>
-<div class="price">$6.00</div>
-</div>
-</div>
-
-<div class="card">
-<img src="cachama.jpg.png">
-<div class="card-body">
-<h3>Tilapia Asada</h3>
-<span class="subtitle">Grilled Tilapia</span>
-<div class="price">$6.00</div>
-</div>
-</div>
-
+<div class="card"><img src="chuleta.jpg" onerror="this.src='cachama.jpg'"><div class="card-body"><h3>Chuleta Asada de Cerdo</h3><p>2 unidades.</p><span class="price">$6.00</span></div></div>
+<div class="card"><img src="pollo.jpg" onerror="this.src='cachama.jpg'"><div class="card-body"><h3>Pollo Ahumado</h3><p>Presa de pollo ahumado.</p><span class="price">$6.00</span></div></div>
+<div class="card"><img src="tilapia-frita.jpg" onerror="this.src='cachama.jpg'"><div class="card-body"><h3>Tilapia Frita</h3><p>Con guarniciones tradicionales.</p><span class="price">$6.00</span></div></div>
+<div class="card"><img src="tilapia-asada.jpg" onerror="this.src='cachama.jpg'"><div class="card-body"><h3>Tilapia Asada</h3><p>Preparada al momento.</p><span class="price">$6.00</span></div></div>
 </div>
 </section>
 
 <section>
-<h2 class="title">
-ESPECIALES DE LA CASA
-<span class="subtitle">HOUSE SPECIALTIES</span>
-</h2>
+<h2 class="title">Especiales de la Casa</h2>
 
 <div class="grid">
-
-<div class="card">
-<img src="cachama.jpg.png">
-<div class="card-body">
-<h3>Caldo de Gallina Criolla</h3>
-<span class="subtitle">Creole Hen Soup</span>
-<div class="price">$7.00</div>
-</div>
-</div>
-
-<div class="card">
-<img src="cachama.jpg.png">
-<div class="card-body">
-<h3>Bandeja de Cachama Ahumada</h3>
-<span class="subtitle">Smoked Cachama Platter</span>
-<div class="price">Desde $25</div>
-</div>
-</div>
-
+<div class="card"><img src="caldo-gallina.jpg" onerror="this.src='cachama.jpg'"><div class="card-body"><h3>Caldo de Gallina Criolla</h3><p>Gallina criolla, yuca cocinada, perejil, cebolla blanca y limón.</p><span class="price">$7.00</span></div></div>
+<div class="card"><img src="cachama-bandeja.jpg" onerror="this.src='cachama.jpg'"><div class="card-body"><h3>Bandeja de Cachama Ahumada</h3><p>Ideal para compartir. A mayor precio, cachama más grande y guarniciones más abundantes.</p><span class="price">Desde $25</span></div></div>
+<div class="card"><div class="card-body"><h3>Guarniciones</h3><p>Arroz, chifles, yuca, menestra, ensalada y ají de la casa.</p><span class="price">Desde $1 • Ají gratis</span></div></div>
 </div>
 </section>
 
 <section>
-<h2 class="title">
-MENÚ COMPLETO
-<span class="subtitle">FULL MENU</span>
-</h2>
+<h2 class="title">Bebidas</h2>
+
+<div class="grid">
+<div class="card"><div class="card-body"><h3>Té de Guayusa Helado</h3><p>Repeticiones ilimitadas.</p><span class="price">Gratis</span></div></div>
+<div class="card"><div class="card-body"><h3>Gaseosas</h3><p>Botella personal.</p><span class="price">$1.00</span></div></div>
+<div class="card"><div class="card-body"><h3>Aguas</h3><p>Agua natural y con gas.</p><span class="price">$1.00</span></div></div>
+<div class="card"><div class="card-body"><h3>Cervezas</h3><p>Club $3.00 • Pilsener $3.50 • Corona $3.50</p><span class="price">Desde $3.00</span></div></div>
+</div>
+</section>
+
+<section id="menu-completo">
+<h2 class="title">Menú Completo</h2>
 
 <div class="carousel">
-<img id="menuImage" src="menu1.jpg.png" alt="Menú Pakisha">
+<img id="menuImage" src="menu1.jpg" alt="Menú Paradero Pakisha">
 
 <div class="carousel-buttons">
 <button onclick="prevMenu()">Anterior</button>
 <button onclick="nextMenu()">Siguiente</button>
 </div>
 
-<a class="btn gold" href="menu.pdf.pdf" target="_blank">
-Abrir Menú PDF
-</a>
+<a class="btn gold" href="menu.pdf" target="_blank">Abrir Menú PDF</a>
 </div>
 </section>
 
-<section class="story">
-<h2 class="title">
-NUESTRA HISTORIA
-<span class="subtitle">OUR STORY</span>
-</h2>
+<section class="story" id="historia">
+<h2 class="title">Nuestra Historia</h2>
 
 <div class="story-box">
-Paradero Pakisha es un restaurante familiar con más de 10 años de trayectoria, donde compartimos el auténtico sabor de la Amazonía ecuatoriana en un ambiente cálido, natural y lleno de tradición.
-
-<br><br>
-
+<p>
+Paradero Pakisha es un restaurante familiar que nació con el propósito de compartir el auténtico sabor de la Amazonía ecuatoriana en un ambiente cálido, natural y lleno de tradición.
+</p>
+<br>
+<p>
+Durante más de 10 años hemos trabajado con dedicación para ofrecer a nuestros visitantes una experiencia gastronómica única, donde cada plato refleja nuestras raíces, nuestra cultura y el amor por la buena cocina.
+</p>
+<br>
+<p>
 Somos parte de la cultura Kichwa, y esa identidad vive en cada detalle de nuestra atención, nuestros sabores y nuestra forma de recibir a cada familia que nos visita.
-
-<br><br>
-
-<span class="subtitle" style="font-size:16px">
-Paradero Pakisha is a family restaurant with more than 10 years of experience, where we share the authentic flavor of the Ecuadorian Amazon in a warm, natural, and tradition-filled environment.
-
-<br><br>
-
-We are part of the Kichwa culture, and that identity lives in every detail of our service, flavors, and the way we welcome every family that visits us.
-</span>
+</p>
+<br>
+<p>
+Nuestra especialidad, la Cachama Ahumada, representa la esencia de nuestra cocina: tradición, calidad y el orgullo de nuestras raíces amazónicas.
+</p>
 </div>
 </section>
 
-<section class="promo">
-<h2 class="title" style="color:#f4b51b">
-PROMOCIONES
-<span class="subtitle" style="color:white;">SPECIAL PROMOTIONS</span>
-</h2>
-
-<img src="dia-madre.jpg.jpeg" alt="Promoción Día de la Madre">
-
-<br><br>
-
-<a class="btn gold" href="https://wa.me/593995876934" target="_blank">
-Consultar promoción
-</a>
+<section class="promo" id="promo">
+<h2 class="title">Promociones Especiales</h2>
+<p class="intro" style="color:white;margin-bottom:25px">
+Disfruta nuestras promociones y eventos especiales de temporada.
+</p>
+<img src="dia-madre.jpg" alt="Promoción Día de la Madre">
+<br>
+<a class="btn gold" href="https://wa.me/593995876934" target="_blank">Consultar promoción por WhatsApp</a>
 </section>
 
-<section class="contact">
-<h2 class="title" style="color:#f4b51b">
-CONTACTO
-<span class="subtitle" style="color:white">CONTACT</span>
-</h2>
+<section class="contact" id="ubicacion">
+<div>
+<h2 class="title">Ubicación</h2>
+<p><strong>Km 13 de la vía Tena – Talag</strong></p>
+<p>Tena, Napo, Ecuador</p>
+<br>
+<a class="btn gold" href="https://www.google.com/maps/place/PARADERO+PAKISHA/@-1.0562495,-77.8976783,17z/data=!3m1!4b1!4m6!3m5!1s0x91d6a8431e4ecbe7:0xd1ffc5af111b424!8m2!3d-1.0562549!4d-77.8951034!16s%2Fg%2F11ggm4706d" target="_blank">Ver en Google Maps</a>
+</div>
 
-<p>WhatsApp: +593 99 587 6934</p>
-<br>
+<div>
+<h2 class="title">Contacto</h2>
+<p>WhatsApp principal: +593 99 587 6934</p>
+<p>WhatsApp adicional: +593 97 937 6286</p>
 <p>Facebook: Paradero Pakisha</p>
-<br>
 <p>Instagram: @paraderopakisha</p>
 <br>
-<p>Km 13 vía Tena – Talag<br>Tena – Napo – Ecuador</p>
-
+<a class="btn" href="https://www.facebook.com/profile.php?id=100052481355500" target="_blank">Facebook</a>
+<a class="btn" href="https://www.instagram.com/paraderopakisha/" target="_blank">Instagram</a>
+</div>
 </section>
 
 <footer>
-© 2026 Paradero Pakisha — Restaurante Familiar Kichwa
+© 2026 Paradero Pakisha — Restaurante familiar Kichwa | Tena, Napo, Ecuador
 </footer>
 
 <script>
@@ -376,7 +447,7 @@ let menuActual = 1;
 const totalMenus = 5;
 
 function mostrarMenu(){
-document.getElementById("menuImage").src = "menu" + menuActual + ".jpg.png";
+document.getElementById("menuImage").src = "menu" + menuActual + ".jpg";
 }
 
 function nextMenu(){
