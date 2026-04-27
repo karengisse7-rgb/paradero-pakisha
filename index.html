@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paradero Pakisha | Menú Bilingüe</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial,sans-serif;background:#fff6e8;color:#2f160c}
@@ -13,7 +14,9 @@ html{scroll-behavior:smooth}
 
 .hero{
 min-height:100vh;
-background:linear-gradient(90deg,rgba(25,5,2,.92),rgba(60,10,5,.70),rgba(25,5,2,.25)),url("restaurante.jpg");
+background:
+linear-gradient(90deg,rgba(25,5,2,.92),rgba(60,10,5,.70),rgba(25,5,2,.25)),
+url("restaurante.jpg.png");
 background-size:cover;
 background-position:center;
 color:white;
@@ -26,7 +29,6 @@ justify-content:center;
 .logo{
 width:140px;
 height:140px;
-border-radius:50%;
 object-fit:cover;
 margin-bottom:20px;
 box-shadow:0 0 25px rgba(0,0,0,.5);
@@ -121,6 +123,33 @@ border-radius:8px;
 font-weight:bold;
 }
 
+.carousel{
+max-width:850px;
+margin:auto;
+text-align:center;
+}
+
+.carousel img{
+width:100%;
+border-radius:20px;
+box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+.carousel-buttons{
+margin-top:18px;
+}
+
+.carousel-buttons button{
+background:#7d0c0c;
+color:white;
+border:none;
+padding:13px 22px;
+border-radius:12px;
+font-weight:bold;
+margin:5px;
+cursor:pointer;
+}
+
 .story{
 background:#fff9ef;
 }
@@ -134,6 +163,12 @@ border-radius:20px;
 box-shadow:0 8px 25px rgba(0,0,0,.08);
 line-height:1.8;
 font-size:18px;
+}
+
+.promo{
+background:#5a0707;
+color:white;
+text-align:center;
 }
 
 .contact{
@@ -154,14 +189,18 @@ padding:20px;
 <body>
 
 <header class="hero">
-<img src="logo.jpg" class="logo">
 
-<h1>Paradero <span>Pakisha</span></h1>
+<img src="logo.jpg.jpeg" class="logo" alt="Logo Pakisha">
+
+<h1>PARADERO <span>PAKISHA</span></h1>
 
 <h2>Cachama Ahumada</h2>
+
 <p>
 Más de 10 años compartiendo el auténtico sabor de la Amazonía ecuatoriana.<br>
-<span class="subtitle" style="color:#fff;">More than 10 years sharing the authentic flavor of the Ecuadorian Amazon.</span>
+<span class="subtitle" style="color:white;">
+More than 10 years sharing the authentic flavor of the Ecuadorian Amazon.
+</span>
 </p>
 
 <a class="btn" href="https://wa.me/593995876934" target="_blank">
@@ -173,6 +212,7 @@ Ordenar por WhatsApp<br>
 Ver Menú<br>
 <span class="subtitle">See Menu</span>
 </a>
+
 </header>
 
 <section id="menu">
@@ -184,7 +224,7 @@ PLATOS A LA CARTA
 <div class="grid">
 
 <div class="card">
-<img src="chuleta.jpg" onerror="this.src='cachama.jpg'">
+<img src="cachama.jpg.png">
 <div class="card-body">
 <h3>Chuleta Asada de Cerdo (2 unidades)</h3>
 <span class="subtitle">Pork Chop Roast (2 pieces)</span>
@@ -193,7 +233,7 @@ PLATOS A LA CARTA
 </div>
 
 <div class="card">
-<img src="pollo.jpg" onerror="this.src='cachama.jpg'">
+<img src="cachama.jpg.png">
 <div class="card-body">
 <h3>Pollo Ahumado (Presa)</h3>
 <span class="subtitle">Smoked Chicken (Quarter)</span>
@@ -202,7 +242,7 @@ PLATOS A LA CARTA
 </div>
 
 <div class="card">
-<img src="tilapia-frita.jpg" onerror="this.src='cachama.jpg'">
+<img src="cachama.jpg.png">
 <div class="card-body">
 <h3>Tilapia Frita</h3>
 <span class="subtitle">Fried Tilapia</span>
@@ -211,7 +251,7 @@ PLATOS A LA CARTA
 </div>
 
 <div class="card">
-<img src="tilapia-asada.jpg" onerror="this.src='cachama.jpg'">
+<img src="cachama.jpg.png">
 <div class="card-body">
 <h3>Tilapia Asada</h3>
 <span class="subtitle">Grilled Tilapia</span>
@@ -231,7 +271,7 @@ ESPECIALES DE LA CASA
 <div class="grid">
 
 <div class="card">
-<img src="caldo-gallina.jpg" onerror="this.src='cachama.jpg'">
+<img src="cachama.jpg.png">
 <div class="card-body">
 <h3>Caldo de Gallina Criolla</h3>
 <span class="subtitle">Creole Hen Soup</span>
@@ -240,7 +280,7 @@ ESPECIALES DE LA CASA
 </div>
 
 <div class="card">
-<img src="cachama-bandeja.jpg" onerror="this.src='cachama.jpg'">
+<img src="cachama.jpg.png">
 <div class="card-body">
 <h3>Bandeja de Cachama Ahumada</h3>
 <span class="subtitle">Smoked Cachama Platter</span>
@@ -251,6 +291,26 @@ ESPECIALES DE LA CASA
 </div>
 </section>
 
+<section>
+<h2 class="title">
+MENÚ COMPLETO
+<span class="subtitle">FULL MENU</span>
+</h2>
+
+<div class="carousel">
+<img id="menuImage" src="menu1.jpg.png" alt="Menú Pakisha">
+
+<div class="carousel-buttons">
+<button onclick="prevMenu()">Anterior</button>
+<button onclick="nextMenu()">Siguiente</button>
+</div>
+
+<a class="btn gold" href="menu.pdf.pdf" target="_blank">
+Abrir Menú PDF
+</a>
+</div>
+</section>
+
 <section class="story">
 <h2 class="title">
 NUESTRA HISTORIA
@@ -258,16 +318,37 @@ NUESTRA HISTORIA
 </h2>
 
 <div class="story-box">
-Paradero Pakisha es un restaurante familiar con más de 10 años de trayectoria, donde compartimos el auténtico sabor de la Amazonía ecuatoriana en un ambiente cálido, natural y lleno de tradición.<br><br>
+Paradero Pakisha es un restaurante familiar con más de 10 años de trayectoria, donde compartimos el auténtico sabor de la Amazonía ecuatoriana en un ambiente cálido, natural y lleno de tradición.
 
-Somos parte de la cultura Kichwa, y esa identidad vive en cada detalle de nuestra atención, nuestros sabores y nuestra forma de recibir a cada familia que nos visita.<br><br>
+<br><br>
+
+Somos parte de la cultura Kichwa, y esa identidad vive en cada detalle de nuestra atención, nuestros sabores y nuestra forma de recibir a cada familia que nos visita.
+
+<br><br>
 
 <span class="subtitle" style="font-size:16px">
-Paradero Pakisha is a family restaurant with more than 10 years of experience, where we share the authentic flavor of the Ecuadorian Amazon in a warm, natural, and tradition-filled environment.<br><br>
+Paradero Pakisha is a family restaurant with more than 10 years of experience, where we share the authentic flavor of the Ecuadorian Amazon in a warm, natural, and tradition-filled environment.
+
+<br><br>
 
 We are part of the Kichwa culture, and that identity lives in every detail of our service, flavors, and the way we welcome every family that visits us.
 </span>
 </div>
+</section>
+
+<section class="promo">
+<h2 class="title" style="color:#f4b51b">
+PROMOCIONES
+<span class="subtitle" style="color:white;">SPECIAL PROMOTIONS</span>
+</h2>
+
+<img src="dia-madre.jpg.jpeg" alt="Promoción Día de la Madre">
+
+<br><br>
+
+<a class="btn gold" href="https://wa.me/593995876934" target="_blank">
+Consultar promoción
+</a>
 </section>
 
 <section class="contact">
@@ -276,27 +357,42 @@ CONTACTO
 <span class="subtitle" style="color:white">CONTACT</span>
 </h2>
 
-<p>
-WhatsApp: +593 99 587 6934
-</p>
+<p>WhatsApp: +593 99 587 6934</p>
 <br>
-<p>
-Facebook: Paradero Pakisha
-</p>
+<p>Facebook: Paradero Pakisha</p>
 <br>
-<p>
-Instagram: @paraderopakisha
-</p>
+<p>Instagram: @paraderopakisha</p>
 <br>
-<p>
-Km 13 vía Tena – Talag<br>
-Tena – Napo – Ecuador
-</p>
+<p>Km 13 vía Tena – Talag<br>Tena – Napo – Ecuador</p>
+
 </section>
 
 <footer>
 © 2026 Paradero Pakisha — Restaurante Familiar Kichwa
 </footer>
+
+<script>
+let menuActual = 1;
+const totalMenus = 5;
+
+function mostrarMenu(){
+document.getElementById("menuImage").src = "menu" + menuActual + ".jpg.png";
+}
+
+function nextMenu(){
+menuActual++;
+if(menuActual > totalMenus){menuActual = 1;}
+mostrarMenu();
+}
+
+function prevMenu(){
+menuActual--;
+if(menuActual < 1){menuActual = totalMenus;}
+mostrarMenu();
+}
+
+setInterval(nextMenu, 4500);
+</script>
 
 </body>
 </html>
