@@ -1,5 +1,177 @@
-<header class="hero" id="inicio">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paradero Pakisha</title>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#fff4e4;color:#2b1209}
+a{text-decoration:none}
+
+.hero{
+min-height:100vh;
+background:url("portada.png") center/cover no-repeat;
+color:white;
+padding:30px 6%;
+position:relative;
+display:flex;
+align-items:flex-end;
+justify-content:flex-start;
+}
+
+.nav{
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:85px;
+background:rgba(30,3,3,.90);
+display:flex;
+justify-content:center;
+align-items:center;
+gap:35px;
+z-index:10;
+}
+
+.nav a{
+color:white;
+font-weight:900;
+text-transform:uppercase;
+font-size:14px;
+}
+
+.hero-buttons{
+position:absolute;
+left:6%;
+bottom:45px;
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+z-index:20;
+}
+
+.btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:15px 24px;
+border-radius:16px;
+border:2px solid #ffffff;
+font-weight:900;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.btn.gold{
+background:#f4b51b;
+color:#3a0a04;
+border:2px solid #f4b51b;
+}
+
+section{padding:60px 6%}
+
+.title{
+text-align:center;
+font-size:40px;
+color:#7b0808;
+text-transform:uppercase;
+margin-bottom:28px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:22px;
+}
+
+.card{
+background:#fff9ef;
+border:1px solid #d9a55c;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:190px;
+object-fit:cover;
+}
+
+.card-body{
+padding:18px;
+text-align:center;
+}
+
+.card h3{color:#4d0906;font-size:22px}
+
+.price{
+display:inline-block;
+margin-top:10px;
+background:#850909;
+color:white;
+padding:8px 14px;
+border-radius:8px;
+font-weight:bold;
+}
+
+.carousel{
+max-width:850px;
+margin:auto;
+text-align:center;
+}
+
+.carousel img{
+width:100%;
+border-radius:18px;
+box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+.carousel button{
+background:#7d0c0c;
+color:white;
+border:none;
+padding:13px 22px;
+border-radius:12px;
+margin:15px 5px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.contact{
+background:#500707;
+color:white;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.contact .title{color:#f4b51b;text-align:left}
+
+footer{
+background:#1e0302;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:900px){
+.nav{display:none}
+.hero{min-height:70vh;background-position:center}
+.hero-buttons{left:5%;right:5%;bottom:25px}
+.hero-buttons .btn{width:100%;text-align:center}
+.contact{grid-template-columns:1fr;text-align:center}
+.contact .title{text-align:center}
+.title{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero" id="inicio">
 <div class="nav">
 <a href="#inicio">Inicio</a>
 <a href="#menu">Menú</a>
@@ -10,15 +182,91 @@
 </div>
 
 <div class="hero-buttons">
+<a class="btn" href="https://wa.me/593995876934" target="_blank">Ordenar por WhatsApp</a>
+<a class="btn gold" href="#menu">Ver Menú</a>
+</div>
+</header>
 
-<a class="btn" href="https://wa.me/593995876934" target="_blank">
-Ordenar por WhatsApp
-</a>
+<section id="menu">
+<h2 class="title">Platos a la Carta</h2>
+<div class="grid">
+<div class="card"><img src="cachama.jpg.png"><div class="card-body"><h3>Chuleta Asada de Cerdo</h3><div class="price">$6.00</div></div></div>
+<div class="card"><img src="cachama.jpg.png"><div class="card-body"><h3>Pollo Ahumado</h3><div class="price">$6.00</div></div></div>
+<div class="card"><img src="cachama.jpg.png"><div class="card-body"><h3>Tilapia Frita</h3><div class="price">$6.00</div></div></div>
+<div class="card"><img src="cachama.jpg.png"><div class="card-body"><h3>Tilapia Asada</h3><div class="price">$6.00</div></div></div>
+</div>
+</section>
 
-<a class="btn gold" href="#menu">
-Ver Menú
-</a>
+<section id="especiales">
+<h2 class="title">Especiales de la Casa</h2>
+<div class="grid">
+<div class="card"><div class="card-body"><h3>Caldo de Gallina Criolla</h3><div class="price">$7.00</div></div></div>
+<div class="card"><div class="card-body"><h3>Bandeja de Cachama Ahumada</h3><div class="price">Desde $25</div></div></div>
+</div>
+</section>
 
+<section id="bebidas">
+<h2 class="title">Bebidas</h2>
+<div class="grid">
+<div class="card"><div class="card-body"><h3>Té de Guayusa</h3><div class="price">Gratis</div></div></div>
+<div class="card"><div class="card-body"><h3>Gaseosas</h3><div class="price">$1.00</div></div></div>
+<div class="card"><div class="card-body"><h3>Club Mediana</h3><div class="price">$3.00</div></div></div>
+<div class="card"><div class="card-body"><h3>Club Grande</h3><div class="price">$4.00</div></div></div>
+<div class="card"><div class="card-body"><h3>Pilsener</h3><div class="price">$3.50</div></div></div>
+<div class="card"><div class="card-body"><h3>Corona</h3><div class="price">$3.50</div></div></div>
+</div>
+</section>
+
+<section>
+<h2 class="title">Menú Completo</h2>
+<div class="carousel">
+<img id="menuImage" src="menu1.jpg.png" alt="Menú">
+<button onclick="prevMenu()">Anterior</button>
+<button onclick="nextMenu()">Siguiente</button>
+<br>
+<a class="btn gold" href="menu.pdf.pdf" target="_blank">Abrir Menú PDF</a>
+</div>
+</section>
+
+<section id="ubicacion" class="contact">
+<div>
+<h2 class="title">Ubicación</h2>
+<p>Km 13 vía Tena – Talag<br>Tena, Napo, Ecuador</p>
 </div>
 
-</header>
+<div id="contacto">
+<h2 class="title">Contacto</h2>
+<p>WhatsApp: +593 99 587 6934</p>
+<p>WhatsApp: +593 97 937 6286</p>
+<p>Instagram: @paraderopakisha</p>
+<p>Facebook: Paradero Pakisha</p>
+</div>
+</section>
+
+<footer>© 2026 Paradero Pakisha</footer>
+
+<script>
+let menuActual = 1;
+const totalMenus = 5;
+
+function mostrarMenu(){
+document.getElementById("menuImage").src = "menu" + menuActual + ".jpg.png";
+}
+
+function nextMenu(){
+menuActual++;
+if(menuActual > totalMenus){menuActual = 1;}
+mostrarMenu();
+}
+
+function prevMenu(){
+menuActual--;
+if(menuActual < 1){menuActual = totalMenus;}
+mostrarMenu();
+}
+
+setInterval(nextMenu,4500);
+</script>
+
+</body>
+</html>
