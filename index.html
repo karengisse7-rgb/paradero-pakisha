@@ -8,7 +8,13 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#fff4e4;color:#2b1209}
+
+body{
+font-family:Arial,sans-serif;
+background:#fff4e4;
+color:#2b1209;
+}
+
 a{text-decoration:none}
 
 .hero{
@@ -43,6 +49,10 @@ text-transform:uppercase;
 font-size:14px;
 }
 
+.nav a:hover{
+color:#f4b51b;
+}
+
 .hero-buttons{
 position:absolute;
 left:6%;
@@ -58,10 +68,15 @@ display:inline-block;
 background:#25D366;
 color:white;
 padding:15px 24px;
-border-radius:16px;
+border-radius:30px;
 border:2px solid #ffffff;
 font-weight:900;
 box-shadow:0 8px 20px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
 }
 
 .btn.gold{
@@ -70,62 +85,88 @@ color:#3a0a04;
 border:2px solid #f4b51b;
 }
 
-section{padding:60px 6%}
+section{
+padding:60px 6%;
+}
 
 .title{
 text-align:center;
 font-size:40px;
 color:#7b0808;
 text-transform:uppercase;
-margin-bottom:28px;
+margin-bottom:32px;
 }
 
+/* GRID GENERAL */
 .grid{
 display:grid;
-grid-template-columns:repeat(3, 1fr);
 gap:28px;
-max-width:1100px;
 margin:0 auto;
 }
-  
-  @media(max-width:900px){
-.grid{
-grid-template-columns: repeat(1, 1fr);
-max-width:420px;
+
+/* PLATOS */
+.platos-grid{
+grid-template-columns:repeat(4, 1fr);
+max-width:1250px;
 }
+
+/* ESPECIALES */
+.especiales-grid{
+grid-template-columns:repeat(2, 1fr);
+max-width:900px;
+}
+
+/* BEBIDAS */
+.bebidas-grid{
+grid-template-columns:repeat(3, 1fr);
+max-width:1100px;
 }
 
 .card{
 background:#fff9ef;
 border:1px solid #d9a55c;
-border-radius:16px;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+box-shadow:0 10px 25px rgba(0,0,0,.10);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 35px rgba(0,0,0,.18);
 }
 
 .card img{
 width:100%;
-height:220px;
+height:230px;
 object-fit:contain;
 background:#fff4e4;
-padding:8px;
+padding:10px;
 }
 
 .card-body{
-padding:18px;
+padding:22px 18px;
 text-align:center;
 }
 
-.card h3{color:#4d0906;font-size:22px}
+.card h3{
+color:#4d0906;
+font-size:22px;
+margin-bottom:8px;
+}
 
 .price{
 display:inline-block;
 margin-top:10px;
 background:#850909;
 color:white;
-padding:8px 14px;
-border-radius:8px;
+padding:9px 16px;
+border-radius:9px;
 font-weight:bold;
+}
+
+#bebidas .card-body{
+padding:32px 18px;
 }
 
 .carousel{
@@ -151,6 +192,10 @@ cursor:pointer;
 font-weight:bold;
 }
 
+.carousel button:hover{
+background:#500707;
+}
+
 .contact{
 background:#500707;
 color:white;
@@ -159,7 +204,10 @@ grid-template-columns:1fr 1fr;
 gap:30px;
 }
 
-.contact .title{color:#f4b51b;text-align:left}
+.contact .title{
+color:#f4b51b;
+text-align:left;
+}
 
 footer{
 background:#1e0302;
@@ -168,14 +216,57 @@ text-align:center;
 padding:20px;
 }
 
+/* TABLET */
+@media(max-width:1100px){
+.platos-grid{
+grid-template-columns:repeat(2, 1fr);
+max-width:800px;
+}
+}
+
+/* CELULAR */
 @media(max-width:900px){
 .nav{display:none}
-.hero{min-height:70vh;background-position:center}
-.hero-buttons{left:5%;right:5%;bottom:25px}
-.hero-buttons .btn{width:100%;text-align:center}
-.contact{grid-template-columns:1fr;text-align:center}
-.contact .title{text-align:center}
-.title{font-size:30px}
+
+.hero{
+min-height:70vh;
+background-position:center;
+}
+
+.hero-buttons{
+left:5%;
+right:5%;
+bottom:25px;
+}
+
+.hero-buttons .btn{
+width:100%;
+text-align:center;
+}
+
+.platos-grid,
+.especiales-grid,
+.bebidas-grid{
+grid-template-columns:1fr;
+max-width:420px;
+}
+
+.contact{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.contact .title{
+text-align:center;
+}
+
+.title{
+font-size:30px;
+}
+
+.card img{
+height:220px;
+}
 }
 </style>
 </head>
@@ -199,25 +290,68 @@ padding:20px;
 
 <section id="menu">
 <h2 class="title">Platos a la Carta</h2>
-<div class="grid">
-<div class="card"><img src="chuleta.png"><div class="card-body"><h3>Chuleta Asada de Cerdo</h3><div class="price">$6.00</div></div></div>
-<div class="card"><img src="pollo.png"><div class="card-body"><h3>Pollo Ahumado</h3><div class="price">$6.00</div></div></div>
-<div class="card"><img src="tilapia-frita.png"><div class="card-body"><h3>Tilapia Frita</h3><div class="price">$6.00</div></div></div>
-<div class="card"><img src="tilapia-asada.png"><div class="card-body"><h3>Tilapia Asada</h3><div class="price">$6.00</div></div></div>
+
+<div class="grid platos-grid">
+<div class="card">
+<img src="chuleta.png" alt="Chuleta Asada de Cerdo">
+<div class="card-body">
+<h3>Chuleta Asada de Cerdo</h3>
+<div class="price">$6.00</div>
+</div>
+</div>
+
+<div class="card">
+<img src="pollo.png" alt="Pollo Ahumado">
+<div class="card-body">
+<h3>Pollo Ahumado</h3>
+<div class="price">$6.00</div>
+</div>
+</div>
+
+<div class="card">
+<img src="tilapia-frita.png" alt="Tilapia Frita">
+<div class="card-body">
+<h3>Tilapia Frita</h3>
+<div class="price">$6.00</div>
+</div>
+</div>
+
+<div class="card">
+<img src="tilapia-asada.png" alt="Tilapia Asada">
+<div class="card-body">
+<h3>Tilapia Asada</h3>
+<div class="price">$6.00</div>
+</div>
+</div>
 </div>
 </section>
 
 <section id="especiales">
 <h2 class="title">Especiales de la Casa</h2>
-<div class="grid">
-<div class="card"><img src="caldo-gallina.jpeg"><div class="card-body"><h3>Caldo de Gallina Criolla</h3><div class="price">$7.00</div></div></div>
-<div class="card"><img src="cachama-bandeja.png"><div class="card-body"><h3>Bandeja de Cachama Ahumada</h3><div class="price">Desde $25</div></div></div>
+
+<div class="grid especiales-grid">
+<div class="card">
+<img src="caldo-gallina.jpeg" alt="Caldo de Gallina Criolla">
+<div class="card-body">
+<h3>Caldo de Gallina Criolla</h3>
+<div class="price">$7.00</div>
+</div>
+</div>
+
+<div class="card">
+<img src="cachama-bandeja.png" alt="Bandeja de Cachama Ahumada">
+<div class="card-body">
+<h3>Bandeja de Cachama Ahumada</h3>
+<div class="price">Desde $25</div>
+</div>
+</div>
 </div>
 </section>
 
 <section id="bebidas">
 <h2 class="title">Bebidas</h2>
-<div class="grid">
+
+<div class="grid bebidas-grid">
 <div class="card"><div class="card-body"><h3>Té de Guayusa</h3><div class="price">Gratis</div></div></div>
 <div class="card"><div class="card-body"><h3>Gaseosas</h3><div class="price">$1.00</div></div></div>
 <div class="card"><div class="card-body"><h3>Club Mediana</h3><div class="price">$3.00</div></div></div>
@@ -229,6 +363,7 @@ padding:20px;
 
 <section>
 <h2 class="title">Menú Completo</h2>
+
 <div class="carousel">
 <img id="menuImage" src="menu1.jpg.png" alt="Menú">
 <button onclick="prevMenu()">Anterior</button>
