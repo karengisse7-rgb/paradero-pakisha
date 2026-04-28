@@ -12,8 +12,7 @@ body{font-family:Arial,sans-serif;background:#fff4e4;color:#2b1209}
 a{text-decoration:none}
 
 .hero{
-min-height:calc(100vh - 85px);
-padding-top:110px;
+min-height:100vh;
 background:url("portada.png") center/cover no-repeat;
 color:white;
 padding:30px 6%;
@@ -24,11 +23,11 @@ justify-content:flex-start;
 }
 
 .nav{
-position:relative;
+position:absolute;
 top:0;
 left:0;
 right:0;
-height:78px;
+height:85px;
 background:rgba(30,3,3,.90);
 display:flex;
 justify-content:center;
@@ -46,7 +45,7 @@ font-size:14px;
 
 .hero-buttons{
 position:absolute;
-right:6%;
+left:6%;
 bottom:45px;
 display:flex;
 gap:18px;
@@ -175,7 +174,7 @@ padding:20px;
 <header class="hero" id="inicio">
 <div class="nav">
 <a href="#inicio">Inicio</a>
-<a href="menu.pdf.pdf" target="_blank">Menú</a>
+<a href="#menu">Menú</a>
 <a href="#especiales">Especiales</a>
 <a href="#bebidas">Bebidas</a>
 <a href="#ubicacion">Ubicación</a>
@@ -184,6 +183,7 @@ padding:20px;
 
 <div class="hero-buttons">
 <a class="btn" href="https://wa.me/593995876934" target="_blank">Ordenar por WhatsApp</a>
+<a class="btn gold" href="#menu">Ver Menú</a>
 </div>
 </header>
 
