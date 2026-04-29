@@ -200,12 +200,24 @@ max-width:1100px;
 }
 
 .card{
+position:relative;
 background:#fffaf2;
 border:1px solid rgba(217,165,92,.45);
 border-radius:22px;
 overflow:hidden;
 box-shadow:0 15px 35px rgba(0,0,0,.08);
 transition:.35s;
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(to right, #f4b51b, #c88a00);
+z-index:2;
 }
 .card:hover{
 transform:translateY(-8px);
