@@ -11,7 +11,7 @@ html{scroll-behavior:smooth}
 
 body{
 font-family:Arial,sans-serif;
-bbackground:#f8f1e7;
+background:#f8f1e7;
 color:#2b1209;
 }
 
@@ -46,7 +46,8 @@ border-radius:18px;
 border:1px solid rgba(244,181,27,.25);
 box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
-  .menu-toggle{
+
+.menu-toggle{
 display:none;
 position:absolute;
 top:22px;
@@ -165,7 +166,8 @@ margin-top:-10px;
 margin-bottom:14px;
 font-style:italic;
 }
-  .menu-description{
+
+.menu-description{
 max-width:850px;
 margin:0 auto 24px;
 text-align:center;
@@ -192,26 +194,22 @@ margin:0 auto 40px;
 border-radius:10px;
 }
 
-/* GRID GENERAL */
 .grid{
 display:grid;
 gap:28px;
 margin:0 auto;
 }
 
-/* PLATOS */
 .platos-grid{
 grid-template-columns:repeat(4, 1fr);
 max-width:1250px;
 }
 
-/* ESPECIALES */
 .especiales-grid{
 grid-template-columns:repeat(2, 1fr);
 max-width:900px;
 }
 
-/* BEBIDAS */
 .bebidas-grid{
 grid-template-columns:repeat(3, 1fr);
 max-width:1100px;
@@ -237,6 +235,7 @@ height:5px;
 background:linear-gradient(to right, #f4b51b, #c88a00);
 z-index:2;
 }
+
 .card:hover{
 transform:translateY(-8px);
 box-shadow:0 18px 35px rgba(0,0,0,.18);
@@ -249,12 +248,14 @@ object-fit:cover;
 padding:0;
 background:none;
 }
-  .cachama-img{
+
+.cachama-img{
 object-fit:contain !important;
 background:#f8f1e7;
 padding:8px;
 height:310px !important;
 }
+
 .card-body{
 padding:22px 18px;
 text-align:center;
@@ -283,6 +284,7 @@ font-style:italic;
 font-weight:500;
 color:#b67a2a;
 }
+
 .price{
 display:inline-block;
 margin-top:14px;
@@ -360,20 +362,6 @@ max-width:800px;
 display:block;
 }
 
-.english-title{
-font-size:18px;
-}
-
-.menu-description{
-font-size:16px;
-padding:0 8px;
-}
-
-}
-.menu-description .english{
-font-size:15px;
-}
-
 .nav{
 display:none;
 flex-direction:column;
@@ -391,11 +379,12 @@ border-top:1px solid rgba(244,181,27,.15);
 box-shadow:0 15px 35px rgba(0,0,0,.35);
 transform:none;
 }
-  
+
 .nav a{
 font-size:16px;
 padding:6px 0;
 }
+
 .nav.active{
 display:flex;
 }
@@ -405,6 +394,7 @@ min-height:100vh;
 background:url("portada-vertical.png") center/cover no-repeat;
 background-position:center;
 }
+
 .hero-buttons{
 left:5%;
 right:5%;
@@ -417,16 +407,26 @@ text-align:center;
 padding:15px 24px;
 font-size:16px;
 border-radius:30px;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 gap:12px;
 line-height:1;
 min-height:70px;
 }
 
+.menu-description{
+font-size:16px;
+padding:0 8px;
+}
+
+.menu-description .english{
+font-size:15px;
+}
+
+.english-title{
+font-size:18px;
+}
 
 .platos-grid,
 .especiales-grid,
@@ -451,9 +451,15 @@ font-size:30px;
 .card img{
 height:220px;
 }
+
+.cachama-img{
+height:250px !important;
+}
+
 }
 </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -480,6 +486,7 @@ height:220px;
 <span>Ordenar por WhatsApp</span>
 </a>
 </div>
+
 </header>
 
 <section id="menu">
@@ -503,6 +510,7 @@ and a fresh mixed salad.
 <div class="title-line"></div>
 
 <div class="grid platos-grid">
+
 <div class="card">
 <img src="chuleta.png" alt="Chuleta Asada de Cerdo">
 <div class="card-body">
@@ -546,6 +554,7 @@ Tilapia Asada
 <div class="price">$6.00</div>
 </div>
 </div>
+
 </div>
 </section>
 
@@ -553,6 +562,7 @@ Tilapia Asada
 <h2 class="title">Especiales de la Casa</h2>
 
 <div class="grid especiales-grid">
+
 <div class="card">
 <img src="caldo-gallina.jpeg" alt="Caldo de Gallina Criolla">
 <div class="card-body">
@@ -568,6 +578,7 @@ Tilapia Asada
 <div class="price">Desde $25</div>
 </div>
 </div>
+
 </div>
 </section>
 
@@ -634,7 +645,8 @@ mostrarMenu();
 }
 
 setInterval(nextMenu,4500);
-  function toggleMenu(){
+
+function toggleMenu(){
 document.querySelector(".nav").classList.toggle("active");
 }
 </script>
