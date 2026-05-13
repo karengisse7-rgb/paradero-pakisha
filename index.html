@@ -686,17 +686,7 @@ You get a bigger fish and larger side portions.
 </div>
 </section>
 
-<section>
-<h2 class="title">Menú Completo</h2>
 
-<div class="carousel">
-<img id="menuImage" src="menu1.jpg.png" alt="Menú">
-<button onclick="prevMenu()">Anterior</button>
-<button onclick="nextMenu()">Siguiente</button>
-<br>
-<a class="btn gold" href="menu.pdf.pdf" target="_blank">Abrir Menú PDF</a>
-</div>
-</section>
 
 <section id="ubicacion" class="contact">
 <div>
@@ -716,26 +706,7 @@ You get a bigger fish and larger side portions.
 <footer>© 2026 Paradero Pakisha</footer>
 
 <script>
-let menuActual = 1;
-const totalMenus = 5;
 
-function mostrarMenu(){
-document.getElementById("menuImage").src = "menu" + menuActual + ".jpg.png";
-}
-
-function nextMenu(){
-menuActual++;
-if(menuActual > totalMenus){menuActual = 1;}
-mostrarMenu();
-}
-
-function prevMenu(){
-menuActual--;
-if(menuActual < 1){menuActual = totalMenus;}
-mostrarMenu();
-}
-
-setInterval(nextMenu,4500);
 
 function toggleMenu(){
 document.querySelector(".nav").classList.toggle("active");
