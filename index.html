@@ -29,25 +29,24 @@ justify-content:flex-start;
 background:#120302;
 }
 
-.hero-bg{
+.hero-video{
 position:absolute;
 inset:0;
-z-index:1;
-}
-
-.hero-bg img{
 width:100%;
 height:100%;
 object-fit:cover;
-filter:brightness(.50);
+z-index:1;
+filter:brightness(.62) contrast(1.08) saturate(1.08);
 }
 
-.hero::after{
-content:"";
+.hero-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(90deg, rgba(20,3,2,.88) 0%, rgba(20,3,2,.45) 45%, rgba(20,3,2,.15) 100%);
+background:
+linear-gradient(90deg, rgba(20,3,2,.88) 0%, rgba(20,3,2,.50) 42%, rgba(20,3,2,.18) 100%),
+linear-gradient(0deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.05) 45%, rgba(0,0,0,.25) 100%);
 z-index:2;
+pointer-events:none;
 }
 
 .hero-logo{
@@ -105,17 +104,6 @@ font-family:Georgia, serif;
 font-style:italic;
 font-size:20px;
 opacity:.95;
-}
-
-.hero-fish{
-position:absolute;
-right:-2%;
-bottom:0;
-width:48%;
-max-width:680px;
-z-index:3;
-filter:drop-shadow(-18px 20px 28px rgba(0,0,0,.55))
-  drop-shadow(0 0 18px rgba(244,181,27,.18));
 }
 
 .nav{
@@ -740,65 +728,57 @@ height:250px !important;
 
 <header class="hero" id="inicio">
 
-<div class="hero-bg">
-<img src="restaurante.png" alt="Paradero Pakisha">
-</div>
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="video-portada.mp4" type="video/mp4">
+  </video>
 
-<div class="menu-toggle" onclick="toggleMenu()">
-☰
-</div>
+  <div class="hero-overlay"></div>
 
-<div class="nav">
-<a href="#inicio">Inicio</a>
-<a href="#menu">Carta</a>
-<a href="#especiales">Especiales</a>
-<a href="#bebidas">Bebidas</a>
-<a href="menu.pdf.pdf" target="_blank">Menú PDF</a>
-<a href="#ubicacion">Ubicación</a>
-<a href="#contacto">Contacto</a>
-</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<img class="hero-logo" src="logo.png" alt="Logo Pakisha">
+  <div class="nav">
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Carta</a>
+    <a href="#especiales">Especiales</a>
+    <a href="#bebidas">Bebidas</a>
+    <a href="menu.pdf" target="_blank">Menú PDF</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#contacto">Contacto</a>
+  </div>
 
-<div class="hero-content">
+  <img class="hero-logo" src="logo.png" alt="Logo Pakisha">
 
-<h1 class="hero-title">
-Paradero
-<span>Pakisha</span>
-</h1>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Paradero
+      <span>Pakisha</span>
+    </h1>
 
-<div class="hero-script">
-Cachama Ahumada
-</div>
+    <div class="hero-script">Cachama Ahumada</div>
 
-<div class="hero-tags">
-SABOR AMAZÓNICO • TRADICIÓN • FAMILIA
-</div>
+    <div class="hero-tags">
+      SABOR AMAZÓNICO • TRADICIÓN • FAMILIA
+    </div>
 
-<div class="hero-text">
-Más de 10 años compartiendo el auténtico
-sabor de la Amazonía ecuatoriana.
-</div>
+    <div class="hero-text">
+      Más de 10 años compartiendo el auténtico
+      sabor de la Amazonía ecuatoriana.
+    </div>
 
-<div class="hero-text english">
-More than 10 years sharing the authentic
-flavor of the Ecuadorian Amazon.
-</div>
+    <div class="hero-text english">
+      More than 10 years sharing the authentic
+      flavor of the Ecuadorian Amazon.
+    </div>
+  </div>
 
-</div>
-
-<img class="hero-fish" src="cachama.png" alt="Cachama Ahumada">
-
-<div class="hero-buttons">
-<a class="btn whatsapp-btn"
-href="https://wa.me/593995876934"
-target="_blank">
-
-<i class="fab fa-whatsapp whatsapp-icon"></i>
-<span>Ordenar por WhatsApp</span>
-
-</a>
-</div>
+  <div class="hero-buttons">
+    <a class="btn whatsapp-btn"
+       href="https://wa.me/593995876934"
+       target="_blank">
+      <i class="fab fa-whatsapp whatsapp-icon"></i>
+      <span>Ordenar por WhatsApp</span>
+    </a>
+  </div>
 
 </header>
 
