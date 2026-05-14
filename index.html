@@ -17,6 +17,7 @@ color:#2b1209;
 
 a{text-decoration:none}
 
+/* PORTADA CON VIDEO */
 .hero{
 min-height:100vh;
 color:white;
@@ -35,6 +36,7 @@ inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
+object-position:center center;
 z-index:1;
 filter:brightness(.62) contrast(1.08) saturate(1.08);
 }
@@ -44,7 +46,7 @@ position:absolute;
 inset:0;
 background:
 linear-gradient(90deg, rgba(20,3,2,.88) 0%, rgba(20,3,2,.50) 42%, rgba(20,3,2,.18) 100%),
-linear-gradient(0deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.05) 45%, rgba(0,0,0,.25) 100%);
+linear-gradient(0deg, rgba(0,0,0,.50) 0%, rgba(0,0,0,.08) 45%, rgba(0,0,0,.25) 100%);
 z-index:2;
 pointer-events:none;
 }
@@ -55,13 +57,15 @@ left:7%;
 top:120px;
 width:250px;
 z-index:4;
+filter:drop-shadow(0 10px 25px rgba(0,0,0,.55));
 }
 
 .hero-content{
 position:relative;
 z-index:4;
 max-width:520px;
-margin-bottom:90px;
+margin-bottom:105px;
+text-shadow:0 4px 18px rgba(0,0,0,.65);
 }
 
 .hero-title{
@@ -106,6 +110,7 @@ font-size:20px;
 opacity:.95;
 }
 
+/* NAVEGACIÓN */
 .nav{
 position:absolute;
 top:18px;
@@ -166,10 +171,11 @@ color:#f4b51b;
 width:100%;
 }
 
+/* BOTÓN WHATSAPP */
 .hero-buttons{
 position:absolute;
 left:6%;
-bottom:20px;
+bottom:28px;
 display:flex;
 gap:18px;
 flex-wrap:wrap;
@@ -218,12 +224,7 @@ justify-content:center;
 transform:translateY(-4px);
 }
 
-.btn.gold{
-background:#f4b51b;
-color:#3a0a04;
-border:2px solid #f4b51b;
-}
-
+/* SECCIONES */
 section{
 padding:60px 6%;
 }
@@ -288,11 +289,13 @@ grid-template-columns:repeat(2, minmax(420px, 1fr));
 max-width:1200px;
 gap:36px;
 }
+
 .bebidas-grid{
 grid-template-columns:repeat(3, 1fr);
 max-width:1100px;
 }
 
+/* TARJETAS */
 .card{
 position:relative;
 background:#fffaf2;
@@ -333,7 +336,8 @@ background:#f8f1e7;
 padding:8px;
 height:310px !important;
 }
-  .caldo-img{
+
+.caldo-img{
 object-fit:contain !important;
 background:#f8f1e7;
 padding:6px;
@@ -419,33 +423,7 @@ font-size:18px;
 padding:32px 18px;
 }
 
-.carousel{
-max-width:850px;
-margin:auto;
-text-align:center;
-}
-
-.carousel img{
-width:100%;
-border-radius:18px;
-box-shadow:0 12px 30px rgba(0,0,0,.25);
-}
-
-.carousel button{
-background:#7d0c0c;
-color:white;
-border:none;
-padding:13px 22px;
-border-radius:12px;
-margin:15px 5px;
-cursor:pointer;
-font-weight:bold;
-}
-
-.carousel button:hover{
-background:#500707;
-}
-
+/* INFORMACIÓN */
 .info-section{
 background:#500707;
 color:white;
@@ -557,23 +535,19 @@ padding:20px;
 grid-template-columns:repeat(2, 1fr);
 max-width:800px;
 }
+
+.nav{
+gap:22px;
+}
+
+.nav a{
+font-size:13px;
+}
 }
 
 /* CELULAR */
 @media(max-width:900px){
 
-  .special-description{
-font-size:16px;
-}
-
-.english-special{
-font-size:16px;
-line-height:1.6;
-}
-
-.english-title{
-font-size:19px;
-}
 .menu-toggle{
 display:block;
 }
@@ -594,6 +568,7 @@ border-radius:0 0 18px 18px;
 border-top:1px solid rgba(244,181,27,.15);
 box-shadow:0 15px 35px rgba(0,0,0,.35);
 transform:none;
+z-index:50;
 }
 
 .nav a{
@@ -611,8 +586,18 @@ padding:20px 5%;
 align-items:flex-end;
 }
 
+.hero-video{
+object-fit:cover;
+object-position:center center;
+}
+
+.hero-overlay{
+background:
+linear-gradient(0deg, rgba(20,3,2,.88) 0%, rgba(20,3,2,.50) 48%, rgba(20,3,2,.22) 100%);
+}
+
 .hero-logo{
-width:150px;
+width:145px;
 top:95px;
 left:50%;
 transform:translateX(-50%);
@@ -621,11 +606,11 @@ transform:translateX(-50%);
 .hero-content{
 max-width:100%;
 text-align:center;
-margin-bottom:260px;
+margin-bottom:190px;
 }
 
 .hero-title{
-font-size:42px;
+font-size:40px;
 }
 
 .hero-script{
@@ -635,28 +620,21 @@ font-size:24px;
 .hero-tags{
 font-size:13px;
 line-height:1.4;
+margin-top:16px;
 }
 
 .hero-text{
-font-size:18px;
+font-size:17px;
 }
 
 .hero-text.english{
-font-size:16px;
-}
-
-.hero-fish{
-width:95%;
-right:50%;
-transform:translateX(50%);
-bottom:-10px;
-max-width:none;
+font-size:15px;
 }
 
 .hero-buttons{
 left:5%;
 right:5%;
-bottom:-50px;
+bottom:24px;
 }
 
 .hero-buttons .btn{
@@ -670,7 +648,11 @@ align-items:center;
 justify-content:center;
 gap:12px;
 line-height:1;
-min-height:70px;
+min-height:68px;
+}
+
+.whatsapp-icon{
+font-size:36px;
 }
 
 .menu-description{
@@ -680,6 +662,15 @@ padding:0 8px;
 
 .menu-description .english{
 font-size:15px;
+}
+
+.special-description{
+font-size:16px;
+}
+
+.english-special{
+font-size:16px;
+line-height:1.6;
 }
 
 .english-title{
@@ -718,6 +709,10 @@ height:220px;
 height:250px !important;
 }
 
+.caldo-img{
+height:260px !important;
+}
+
 }
 </style>
 
@@ -728,57 +723,57 @@ height:250px !important;
 
 <header class="hero" id="inicio">
 
-  <video class="hero-video" autoplay muted loop playsinline preload="auto">
-    <source src="video-portada.mp4" type="video/mp4">
-  </video>
+<video class="hero-video" autoplay muted loop playsinline preload="auto">
+<source src="video-portada.mp4" type="video/mp4">
+</video>
 
-  <div class="hero-overlay"></div>
+<div class="hero-overlay"></div>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-  <div class="nav">
-    <a href="#inicio">Inicio</a>
-    <a href="#menu">Carta</a>
-    <a href="#especiales">Especiales</a>
-    <a href="#bebidas">Bebidas</a>
-    <a href="menu.pdf" target="_blank">Menú PDF</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#contacto">Contacto</a>
-  </div>
+<div class="nav">
+<a href="#inicio">Inicio</a>
+<a href="#menu">Carta</a>
+<a href="#especiales">Especiales</a>
+<a href="#bebidas">Bebidas</a>
+<a href="menu.pdf" target="_blank">Menú PDF</a>
+<a href="#ubicacion">Ubicación</a>
+<a href="#contacto">Contacto</a>
+</div>
 
-  <img class="hero-logo" src="logo.png" alt="Logo Pakisha">
+<img class="hero-logo" src="logo.png" alt="Logo Pakisha">
 
-  <div class="hero-content">
-    <h1 class="hero-title">
-      Paradero
-      <span>Pakisha</span>
-    </h1>
+<div class="hero-content">
 
-    <div class="hero-script">Cachama Ahumada</div>
+<h1 class="hero-title">
+Paradero
+<span>Pakisha</span>
+</h1>
 
-    <div class="hero-tags">
-      SABOR AMAZÓNICO • TRADICIÓN • FAMILIA
-    </div>
+<div class="hero-script">Cachama Ahumada</div>
 
-    <div class="hero-text">
-      Más de 10 años compartiendo el auténtico
-      sabor de la Amazonía ecuatoriana.
-    </div>
+<div class="hero-tags">
+SABOR AMAZÓNICO • TRADICIÓN • FAMILIA
+</div>
 
-    <div class="hero-text english">
-      More than 10 years sharing the authentic
-      flavor of the Ecuadorian Amazon.
-    </div>
-  </div>
+<div class="hero-text">
+Más de 10 años compartiendo el auténtico
+sabor de la Amazonía ecuatoriana.
+</div>
 
-  <div class="hero-buttons">
-    <a class="btn whatsapp-btn"
-       href="https://wa.me/593995876934"
-       target="_blank">
-      <i class="fab fa-whatsapp whatsapp-icon"></i>
-      <span>Ordenar por WhatsApp</span>
-    </a>
-  </div>
+<div class="hero-text english">
+More than 10 years sharing the authentic
+flavor of the Ecuadorian Amazon.
+</div>
+
+</div>
+
+<div class="hero-buttons">
+<a class="btn whatsapp-btn" href="https://wa.me/593995876934" target="_blank">
+<i class="fab fa-whatsapp whatsapp-icon"></i>
+<span>Ordenar por WhatsApp</span>
+</a>
+</div>
 
 </header>
 
@@ -880,6 +875,7 @@ parsley, white onion and a slice of lime.
 
 </div>
 </div>
+
 <div class="card">
 
 <img class="cachama-img" src="cachama-bandeja.png" alt="Bandeja de Cachama Ahumada">
@@ -917,16 +913,51 @@ You get a bigger fish and larger side portions.
 <h2 class="title">Bebidas</h2>
 
 <div class="grid bebidas-grid">
-<div class="card"><div class="card-body"><h3>Té de Guayusa</h3><div class="price">Gratis</div></div></div>
-<div class="card"><div class="card-body"><h3>Gaseosas</h3><div class="price">$1.00</div></div></div>
-<div class="card"><div class="card-body"><h3>Club Mediana</h3><div class="price">$3.00</div></div></div>
-<div class="card"><div class="card-body"><h3>Club Grande</h3><div class="price">$4.00</div></div></div>
-<div class="card"><div class="card-body"><h3>Pilsener</h3><div class="price">$3.50</div></div></div>
-<div class="card"><div class="card-body"><h3>Corona</h3><div class="price">$3.50</div></div></div>
+
+<div class="card">
+<div class="card-body">
+<h3>Té de Guayusa</h3>
+<div class="price">Gratis</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<h3>Gaseosas</h3>
+<div class="price">$1.00</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<h3>Club Mediana</h3>
+<div class="price">$3.00</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<h3>Club Grande</h3>
+<div class="price">$4.00</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<h3>Pilsener</h3>
+<div class="price">$3.50</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<h3>Corona</h3>
+<div class="price">$3.50</div>
+</div>
+</div>
+
 </div>
 </section>
-
-
 
 <section id="ubicacion" class="info-section">
 
@@ -941,9 +972,7 @@ Km 13 vía Tena – Talag<br>
 Tena, Napo, Ecuador
 </p>
 
-<a class="info-btn"
-href="https://maps.app.goo.gl/MgY4ZiVKM6x1TtnDA"
-target="_blank">
+<a class="info-btn" href="https://maps.app.goo.gl/MgY4ZiVKM6x1TtnDA" target="_blank">
 Ver en Google Maps
 </a>
 
@@ -975,22 +1004,14 @@ y feriados nacionales
 
 <h2>Síguenos</h2>
 
-<a class="social-link"
-href="https://www.facebook.com/profile.php?id=100052481355500"
-target="_blank">
-
+<a class="social-link" href="https://www.facebook.com/profile.php?id=100052481355500" target="_blank">
 <i class="fab fa-facebook"></i>
 Paradero Pakisha
-
 </a>
 
-<a class="social-link"
-href="https://www.instagram.com/paraderopakisha/"
-target="_blank">
-
+<a class="social-link" href="https://www.instagram.com/paraderopakisha/" target="_blank">
 <i class="fab fa-instagram"></i>
 @paraderopakisha
-
 </a>
 
 <div class="whatsapp-list">
@@ -1014,8 +1035,6 @@ target="_blank">
 <footer>© 2026 Paradero Pakisha</footer>
 
 <script>
-
-
 function toggleMenu(){
 document.querySelector(".nav").classList.toggle("active");
 }
