@@ -227,7 +227,7 @@ justify-content:center;
 .btn:hover{
 transform:translateY(-4px);
 }
-  /* NUESTRA HISTORIA */
+  /* QUIÉNES SOMOS */
 
 .historia-section{
 background:linear-gradient(135deg,#fff7ea 0%,#f8ead6 100%);
@@ -237,12 +237,16 @@ overflow:hidden;
 }
 
 .historia-container{
-max-width:1200px;
+max-width:1180px;
 margin:auto;
 display:grid;
-grid-template-columns:.95fr 1.05fr;
-gap:55px;
+grid-template-columns:380px 1fr;
+gap:70px;
 align-items:center;
+}
+
+.historia-imagen-bloque{
+width:100%;
 }
 
 .historia-foto{
@@ -257,23 +261,26 @@ content:"";
 position:absolute;
 inset:0;
 background:
-linear-gradient(90deg, rgba(248,241,231,0) 65%, rgba(248,241,231,.95) 100%),
-linear-gradient(0deg, rgba(123,8,8,.18), rgba(255,255,255,0));
+linear-gradient(90deg, rgba(248,241,231,0) 55%, rgba(248,241,231,.92) 100%),
+linear-gradient(0deg, rgba(123,8,8,.16), rgba(255,255,255,0));
 pointer-events:none;
 }
 
 .historia-foto img{
 width:100%;
+height:500px;
+object-fit:cover;
+object-position:center top;
 display:block;
 border-radius:34px;
 }
 
 .chef-signature{
 text-align:center;
-margin-top:22px;
+margin-top:20px;
 font-family:Georgia,serif;
 font-style:italic;
-font-size:34px;
+font-size:32px;
 color:#7b0808;
 }
 
@@ -281,41 +288,83 @@ color:#7b0808;
 display:block;
 font-family:Arial,sans-serif;
 font-style:normal;
-font-size:16px;
+font-size:15px;
 font-weight:700;
 color:#b67a2a;
 margin-top:6px;
 }
 
 .historia-texto h2{
-font-size:58px;
+font-size:48px;
 color:#7b0808;
 text-transform:uppercase;
 line-height:1;
-margin-bottom:16px;
+margin-bottom:18px;
 }
 
-.historia-texto h3{
-font-family:Georgia,serif;
-font-style:italic;
-font-size:25px;
-color:#b67a2a;
-margin-bottom:25px;
+.intro-historia{
+font-size:24px;
+font-weight:800;
+color:#2b1209;
+line-height:1.35;
+margin-bottom:30px;
 }
 
-.historia-texto p{
-font-size:18px;
-line-height:1.65;
+.historia-pilares{
+display:grid;
+gap:18px;
+margin-bottom:28px;
+}
+
+.pilar{
+display:grid;
+grid-template-columns:54px 1fr;
+gap:16px;
+align-items:flex-start;
+background:rgba(255,255,255,.45);
+border:1px solid rgba(182,122,42,.22);
+border-radius:20px;
+padding:18px 20px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.pilar-icon{
+width:54px;
+height:54px;
+border-radius:50%;
+background:#7b0808;
+color:#f4b51b;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+box-shadow:0 10px 22px rgba(123,8,8,.22);
+}
+
+.pilar h3{
+font-size:21px;
+color:#7b0808;
+margin-bottom:6px;
+}
+
+.pilar p{
+font-size:17px;
+line-height:1.5;
 color:#3b1b10;
-margin-bottom:15px;
-text-align:justify;
+margin:0;
 }
 
-.historia-texto .english{
+.historia-english{
 font-family:Georgia,serif;
 font-style:italic;
+font-size:18px;
+line-height:1.6;
 color:#6b4a2d;
+border-top:1px dashed rgba(182,122,42,.45);
+padding-top:20px;
+margin-top:10px;
 }
+
 /* SECCIONES */
  
 section{
@@ -772,6 +821,67 @@ min-height:72px;
 font-size:40px;
 }
 
+.historia-section{
+padding:60px 6%;
+}
+
+.historia-container{
+grid-template-columns:1fr;
+gap:32px;
+}
+
+.historia-imagen-bloque{
+max-width:310px;
+margin:0 auto;
+}
+
+.historia-foto img{
+height:390px;
+}
+
+.chef-signature{
+font-size:27px;
+}
+
+.historia-texto{
+text-align:center;
+}
+
+.historia-texto h2{
+font-size:34px;
+}
+
+.intro-historia{
+font-size:20px;
+margin-bottom:24px;
+}
+
+.pilar{
+grid-template-columns:44px 1fr;
+gap:12px;
+text-align:left;
+padding:16px;
+}
+
+.pilar-icon{
+width:44px;
+height:44px;
+font-size:20px;
+}
+
+.pilar h3{
+font-size:19px;
+}
+
+.pilar p{
+font-size:15.5px;
+}
+
+.historia-english{
+font-size:16px;
+text-align:center;
+}
+
 .menu-description{
 font-size:16px;
 padding:0 8px;
@@ -850,6 +960,7 @@ height:260px !important;
 
 <div class="nav">
 <a href="#inicio">Inicio</a>
+<a href="#historia">Quiénes Somos</a>
 <a href="#menu">Carta</a>
 <a href="#especiales">Especiales</a>
 <a href="#bebidas">Bebidas</a>
@@ -894,59 +1005,68 @@ flavor of the Ecuadorian Amazon.
 
 </header>
 
-  <section id="historia" class="historia-section">
+<section id="historia" class="historia-section">
 
 <div class="historia-container">
 
-<div class="historia-foto">
+<div class="historia-imagen-bloque">
 
+<div class="historia-foto">
 <img src="chef-irene.png" alt="Chef Irene Grefa">
+</div>
+
+<div class="chef-signature">
+Chef Irene Grefa
+<span>Fundadora y Chef Principal</span>
+</div>
 
 </div>
 
 <div class="historia-texto">
 
-<h2>Nuestra Historia</h2>
-  <p>
+<h2>¿Quiénes Somos?</h2>
+
+<p class="intro-historia">
 En Paradero Pakisha, cada plato cuenta una historia.
-Somos un restaurante familiar, parte de la cultura Kichwa amazónica,
-donde nuestra esencia nace del respeto por nuestras raíces,
-nuestras tradiciones y los sabores ancestrales de nuestra tierra.
-</p>
-  <p>
-Bajo la dirección de la Chef Irene Grefa, mantenemos viva la auténtica
-gastronomía amazónica, ofreciendo recetas tradicionales preparadas con
-ingredientes frescos, sabor casero y técnicas heredadas de generación
-en generación.
-</p>
-  <p>
-Más que un restaurante, Pakisha es un lugar para compartir en familia,
-disfrutar de la naturaleza y vivir una experiencia auténtica en el
-corazón de la Amazonía ecuatoriana.
-</p> 
-  <p class="english">
-At Paradero Pakisha, every dish tells a story.
-We are a family-owned restaurant, part of the Amazonian Kichwa culture,
-where our essence is born from respect for our roots,
-our traditions and the ancestral flavors of our land.
 </p>
 
-<p class="english">
-Under the direction of Chef Irene Grefa, we keep authentic Amazonian
-gastronomy alive by offering traditional recipes prepared with fresh
-ingredients, homemade flavor and cooking techniques passed down from
-generation to generation.
-</p>
+<div class="historia-pilares">
 
-<p class="english">
-More than a restaurant, Pakisha is a place to share with family,
-enjoy nature and experience the true spirit of the Ecuadorian Amazon.
+<div class="pilar">
+<div class="pilar-icon"><i class="fas fa-leaf"></i></div>
+<div>
+<h3>Tradición Kichwa</h3>
+<p>
+Nuestra cultura, costumbres y sabores ancestrales forman parte de cada experiencia que ofrecemos.
 </p>
- <div class="chef-signature">
-Chef Irene Grefa
-<span>Fundadora de Paradero Pakisha</span>
-<span>Founder of Paradero Pakisha</span>
 </div>
+</div>
+
+<div class="pilar">
+<div class="pilar-icon"><i class="fas fa-utensils"></i></div>
+<div>
+<h3>Cocina Familiar</h3>
+<p>
+Recetas transmitidas de generación en generación, preparadas con ingredientes frescos de la zona y el sabor auténtico de la cocina amazónica.
+</p>
+</div>
+</div>
+
+<div class="pilar">
+<div class="pilar-icon"><i class="fas fa-heart"></i></div>
+<div>
+<h3>Compartir en Familia</h3>
+<p>
+Un espacio para disfrutar la naturaleza, la buena comida y momentos especiales junto a quienes más quieres.
+</p>
+</div>
+</div>
+
+</div>
+
+<p class="historia-english">
+At Paradero Pakisha, every dish tells a story. A family-owned restaurant where Kichwa culture, traditional cuisine and the warmth of the Amazon come together.
+</p>
 
 </div>
 
