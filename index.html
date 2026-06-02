@@ -41,6 +41,10 @@ z-index:1;
 filter:brightness(.62) contrast(1.08) saturate(1.08);
 }
 
+.hero-video::-webkit-media-controls{
+display:none !important;
+}
+
 .hero-overlay{
 position:absolute;
 inset:0;
@@ -550,18 +554,21 @@ font-size:13px;
 
 .menu-toggle{
 display:block;
+top:18px;
+right:22px;
+font-size:42px;
 }
 
 .nav{
 display:none;
 flex-direction:column;
 position:absolute;
-top:85px;
+top:75px;
 left:0;
 right:0;
 width:100%;
 height:auto;
-background:rgba(20,2,2,.96);
+background:rgba(20,2,2,.97);
 padding:18px 0;
 gap:16px;
 border-radius:0 0 18px 18px;
@@ -581,43 +588,51 @@ display:flex;
 }
 
 .hero{
-min-height:100vh;
+min-height:100svh;
 padding:20px 5%;
-align-items:flex-end;
+align-items:center;
+justify-content:flex-end;
+flex-direction:column;
 }
 
 .hero-video{
 object-fit:cover;
 object-position:center center;
-transform:scale(1.15) translateX(-12%);
+transform:scale(1.25) translateX(-6%);
+transform-origin:center center;
 }
 
 .hero-overlay{
 background:
-linear-gradient(0deg, rgba(20,3,2,.88) 0%, rgba(20,3,2,.50) 48%, rgba(20,3,2,.22) 100%);
+linear-gradient(0deg, rgba(20,3,2,.92) 0%, rgba(20,3,2,.62) 48%, rgba(20,3,2,.28) 100%);
 }
 
 .hero-logo{
-width:175px;
-top:130px;
-left:50%;
-transform:translateX(-50%);
+position:relative;
+width:170px;
+top:auto;
+left:auto;
+transform:none;
+margin-bottom:18px;
+z-index:4;
 }
 
 .hero-content{
+position:relative;
+z-index:4;
 max-width:92%;
 text-align:center;
-margin:0 auto 170px;
-padding-top:60px;
+margin:0 auto 125px;
+padding-top:0;
 }
 
 .hero-title{
-font-size:38px;
+font-size:39px;
 line-height:.95;
 }
 
 .hero-script{
-font-size:24px;
+font-size:25px;
 margin-top:8px;
 }
 
@@ -631,7 +646,7 @@ margin-top:16px;
 font-size:16px;
 line-height:1.45;
 margin-top:18px;
-max-width:330px;
+max-width:340px;
 margin-left:auto;
 margin-right:auto;
 }
@@ -639,7 +654,7 @@ margin-right:auto;
 .hero-text.english{
 font-size:15px;
 line-height:1.45;
-max-width:330px;
+max-width:340px;
 margin-left:auto;
 margin-right:auto;
 }
@@ -667,6 +682,7 @@ min-height:72px;
 .whatsapp-icon{
 font-size:40px;
 }
+
 .menu-description{
 font-size:16px;
 padding:0 8px;
@@ -735,19 +751,9 @@ height:260px !important;
 
 <header class="hero" id="inicio">
 
-<video class="hero-video" autoplay muted loop playsinline preload="auto">
+<video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
 <source src="videoportada.mp4" type="video/mp4">
 </video>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const video = document.querySelector(".hero-video");
-
-  video.play().catch(function(error) {
-    console.log("Autoplay bloqueado:", error);
-  });
-});
-</script>
 
 <div class="hero-overlay"></div>
 
@@ -1060,6 +1066,26 @@ Paradero Pakisha
 function toggleMenu(){
 document.querySelector(".nav").classList.toggle("active");
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+const video = document.querySelector(".hero-video");
+
+if(video){
+video.muted = true;
+video.defaultMuted = true;
+video.playsInline = true;
+
+const playVideo = () => {
+video.play().catch(function(error){
+console.log("Autoplay bloqueado:", error);
+});
+};
+
+playVideo();
+
+document.addEventListener("touchstart", playVideo, {once:true});
+}
+});
 </script>
 
 </body>
