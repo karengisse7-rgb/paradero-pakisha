@@ -607,7 +607,8 @@ transform:translateX(-50%);
 .hero-content{
 max-width:92%;
 text-align:center;
-margin:0 auto 150px;
+margin:0 auto 170px;
+padding-top:140px;
 }
 
 .hero-title{
@@ -737,6 +738,16 @@ height:260px !important;
 <video class="hero-video" autoplay muted loop playsinline preload="auto">
 <source src="videoportada.mp4" type="video/mp4">
 </video>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const video = document.querySelector(".hero-video");
+
+  video.play().catch(function(error) {
+    console.log("Autoplay bloqueado:", error);
+  });
+});
+</script>
 
 <div class="hero-overlay"></div>
 
